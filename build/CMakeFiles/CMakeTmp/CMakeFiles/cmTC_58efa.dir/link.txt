@@ -1,0 +1,3 @@
+C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\cmTC_58efa.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\cmTC_58efa.dir/objects.a @CMakeFiles\cmTC_58efa.dir\objects1.rsp
+C:\msys64\mingw64\bin\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\cmTC_58efa.dir/objects.a -Wl,--no-whole-archive -o cmTC_58efa.exe -Wl,--out-implib,libcmTC_58efa.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_58efa.dir\linkLibs.rsp

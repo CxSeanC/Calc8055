@@ -4,46 +4,53 @@ project(VulnCalc)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
-# Collect source files (omit api_server.cpp to skip cpprestsdk)
-file(GLOB_RECURSE SOURCES
-    "src/*.cpp"
-    "src/*.c"
-)
+# Add local lib source folders
+add_subdirectory(libs/jansson)
+add_subdirectory(libs/spdlog)
+add_subdirectory(libs/libarchive)
+add_subdirectory(libs/cpprestsdk)
+add_subdirectory(libs/openssl)
+add_subdirectory(libs/zlib)
+add_subdirectory(libs/ncurses)
+add_subdirectory(libs/boost)
+add_subdirectory(libs/pkgconf)
+add_subdirectory(libs/gtk)
+
+# Collect source files
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.c")
 
 # Optional: exclude files needing cpprestsdk
 list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/src/api_server.cpp")
 
 add_executable(vulncalc ${SOURCES})
 
-# Dependencies via pkg-config
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
-pkg_check_modules(CURL REQUIRED libcurl)
-pkg_check_modules(SPDLOG REQUIRED spdlog)
-pkg_check_modules(JANSSON REQUIRED jansson)
-pkg_check_modules(ARCHIVE REQUIRED libarchive)
-find_package(OpenSSL REQUIRED)
-find_package(Threads REQUIRED)
-find_package(ZLIB REQUIRED)
-
+# Include directories
 include_directories(
-    ${GTK3_INCLUDE_DIRS}
-    ${CURL_INCLUDE_DIRS}
-    ${SPDLOG_INCLUDE_DIRS}
-    ${JANSSON_INCLUDE_DIRS}
-    ${ARCHIVE_INCLUDE_DIRS}
+    libs/jansson/src
+    libs/spdlog/include
+    libs/libarchive/libarchive
+    libs/cpprestsdk/Release/include
+    libs/openssl/include
+    libs/zlib
+    libs/ncurses/include
+    libs/boost
+    libs/pkgconf
+    libs/gtk
 )
 
+# Link libraries
 target_link_libraries(vulncalc
-    ${GTK3_LIBRARIES}
-    ${CURL_LIBRARIES}
-    ${SPDLOG_LIBRARIES}
-    ${JANSSON_LIBRARIES}
-    ${ARCHIVE_LIBRARIES}
-    OpenSSL::SSL
-    OpenSSL::Crypto
-    Threads::Threads
-    ZLIB::ZLIB
+    jansson
+    spdlog
+    archive
+    cpprest
+    ssl
+    crypto
+    z
+    ncurses
+    boost
+    pkgconf
+    gtk-3
     iconv
     gio-2.0
     gobject-2.0
@@ -57,10 +64,11 @@ target_link_libraries(vulncalc
     pangocairo-1.0
 )
 
+# Definitions
 add_definitions(
-    ${GTK3_CFLAGS_OTHER}
-    ${CURL_CFLAGS_OTHER}
-    ${SPDLOG_CFLAGS_OTHER}
-    ${JANSSON_CFLAGS_OTHER}
-    ${ARCHIVE_CFLAGS_OTHER}
+    -DGTK3
+    -DCURL
+    -DSPDLOG
+    -DJANSSON
+    -DARCHIVE
 )
