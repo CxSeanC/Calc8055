@@ -16,10 +16,10 @@ cmake_policy(SET CMP0155 OLD)
 cmake_policy(SET CMP0157 OLD)
 include("${CMAKE_ROOT}/Modules/Internal/HeaderpadWorkaround.cmake")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp")
-add_executable(cmTC_58efa)
-target_sources(cmTC_58efa PRIVATE
-  "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp/check_crypto_win.c"
+add_executable(cmTC_287b6)
+target_sources(cmTC_287b6 PRIVATE
+  "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp/check_crypto_md.c"
 )
-file(GENERATE OUTPUT "${CMAKE_BINARY_DIR}/cmTC_58efa_loc"
-     CONTENT $<TARGET_FILE:cmTC_58efa>)
-target_link_libraries(cmTC_58efa ${LINK_LIBRARIES})
+file(GENERATE OUTPUT "${CMAKE_BINARY_DIR}/cmTC_287b6_loc"
+     CONTENT $<TARGET_FILE:cmTC_287b6>)
+target_link_libraries(cmTC_287b6 ${LINK_LIBRARIES})

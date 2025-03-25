@@ -1,0 +1,10 @@
+#include <openssl/ssl.h>
+#include <zlib.h>
+#include <jansson.h>
+#include <spdlog/spdlog.h>
+#include <boost/algorithm/string.hpp>
+#include <gtk/gtk.h>
+#include <archive.h>
+#include <cpprest/http_listener.h>
+#include <ncurses.h>
+#include <pkgconf/pkgconf.h>
