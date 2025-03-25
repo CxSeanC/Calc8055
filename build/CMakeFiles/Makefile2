@@ -84,12 +84,12 @@ clean: CMakeFiles/vulncalc.dir/clean
 CMakeFiles/vulncalc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target vulncalc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target vulncalc"
 .PHONY : CMakeFiles/vulncalc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/vulncalc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/vulncalc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles 0
 .PHONY : CMakeFiles/vulncalc.dir/rule
@@ -101,7 +101,7 @@ vulncalc: CMakeFiles/vulncalc.dir/rule
 # codegen rule for target.
 CMakeFiles/vulncalc.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target vulncalc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target vulncalc"
 .PHONY : CMakeFiles/vulncalc.dir/codegen
 
 # clean rule for target.

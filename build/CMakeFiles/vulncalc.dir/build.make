@@ -71,26 +71,11 @@ include CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/codegen:
 .PHONY : CMakeFiles/vulncalc.dir/codegen
 
-CMakeFiles/vulncalc.dir/src/api_server.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
-CMakeFiles/vulncalc.dir/src/api_server.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
-CMakeFiles/vulncalc.dir/src/api_server.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/api_server.cpp
-CMakeFiles/vulncalc.dir/src/api_server.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vulncalc.dir/src/api_server.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/api_server.cpp.obj -MF CMakeFiles\vulncalc.dir\src\api_server.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\api_server.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\api_server.cpp
-
-CMakeFiles/vulncalc.dir/src/api_server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vulncalc.dir/src/api_server.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\SeanCa\Downloads\CalcSec8055\src\api_server.cpp > CMakeFiles\vulncalc.dir\src\api_server.cpp.i
-
-CMakeFiles/vulncalc.dir/src/api_server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vulncalc.dir/src/api_server.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\SeanCa\Downloads\CalcSec8055\src\api_server.cpp -o CMakeFiles\vulncalc.dir\src\api_server.cpp.s
-
 CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/archive_utils.cpp
 CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj -MF CMakeFiles\vulncalc.dir\src\archive_utils.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\archive_utils.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\archive_utils.cpp
 
 CMakeFiles/vulncalc.dir/src/archive_utils.cpp.i: cmake_force
@@ -105,7 +90,7 @@ CMakeFiles/vulncalc.dir/src/calculator.c.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/calculator.c.obj: CMakeFiles/vulncalc.dir/includes_C.rsp
 CMakeFiles/vulncalc.dir/src/calculator.c.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/calculator.c
 CMakeFiles/vulncalc.dir/src/calculator.c.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/vulncalc.dir/src/calculator.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/vulncalc.dir/src/calculator.c.obj"
 	C:\msys64\mingw64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/calculator.c.obj -MF CMakeFiles\vulncalc.dir\src\calculator.c.obj.d -o CMakeFiles\vulncalc.dir\src\calculator.c.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\calculator.c
 
 CMakeFiles/vulncalc.dir/src/calculator.c.i: cmake_force
@@ -120,7 +105,7 @@ CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj: CMakeFiles/vulncalc.dir/flags.m
 CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/json_parser.cpp
 CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj -MF CMakeFiles\vulncalc.dir\src\json_parser.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\json_parser.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\json_parser.cpp
 
 CMakeFiles/vulncalc.dir/src/json_parser.cpp.i: cmake_force
@@ -135,7 +120,7 @@ CMakeFiles/vulncalc.dir/src/logger.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/logger.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/logger.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/logger.cpp
 CMakeFiles/vulncalc.dir/src/logger.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vulncalc.dir/src/logger.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vulncalc.dir/src/logger.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/logger.cpp.obj -MF CMakeFiles\vulncalc.dir\src\logger.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\logger.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\logger.cpp
 
 CMakeFiles/vulncalc.dir/src/logger.cpp.i: cmake_force
@@ -150,7 +135,7 @@ CMakeFiles/vulncalc.dir/src/main.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/main.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/main.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/main.cpp
 CMakeFiles/vulncalc.dir/src/main.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vulncalc.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vulncalc.dir/src/main.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/main.cpp.obj -MF CMakeFiles\vulncalc.dir\src\main.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\main.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\main.cpp
 
 CMakeFiles/vulncalc.dir/src/main.cpp.i: cmake_force
@@ -165,7 +150,7 @@ CMakeFiles/vulncalc.dir/src/network.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/network.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/network.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/network.cpp
 CMakeFiles/vulncalc.dir/src/network.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vulncalc.dir/src/network.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vulncalc.dir/src/network.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/network.cpp.obj -MF CMakeFiles\vulncalc.dir\src\network.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\network.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\network.cpp
 
 CMakeFiles/vulncalc.dir/src/network.cpp.i: cmake_force
@@ -180,7 +165,7 @@ CMakeFiles/vulncalc.dir/src/secrets.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/secrets.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/secrets.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/secrets.cpp
 CMakeFiles/vulncalc.dir/src/secrets.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vulncalc.dir/src/secrets.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vulncalc.dir/src/secrets.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/secrets.cpp.obj -MF CMakeFiles\vulncalc.dir\src\secrets.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\secrets.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\secrets.cpp
 
 CMakeFiles/vulncalc.dir/src/secrets.cpp.i: cmake_force
@@ -195,7 +180,7 @@ CMakeFiles/vulncalc.dir/src/ui.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/ui.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/ui.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/ui.cpp
 CMakeFiles/vulncalc.dir/src/ui.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vulncalc.dir/src/ui.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vulncalc.dir/src/ui.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/ui.cpp.obj -MF CMakeFiles\vulncalc.dir\src\ui.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\ui.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\ui.cpp
 
 CMakeFiles/vulncalc.dir/src/ui.cpp.i: cmake_force
@@ -210,7 +195,7 @@ CMakeFiles/vulncalc.dir/src/utils.cpp.obj: CMakeFiles/vulncalc.dir/flags.make
 CMakeFiles/vulncalc.dir/src/utils.cpp.obj: CMakeFiles/vulncalc.dir/includes_CXX.rsp
 CMakeFiles/vulncalc.dir/src/utils.cpp.obj: C:/Users/SeanCa/Downloads/CalcSec8055/src/utils.cpp
 CMakeFiles/vulncalc.dir/src/utils.cpp.obj: CMakeFiles/vulncalc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/vulncalc.dir/src/utils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/vulncalc.dir/src/utils.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/vulncalc.dir/src/utils.cpp.obj -MF CMakeFiles\vulncalc.dir\src\utils.cpp.obj.d -o CMakeFiles\vulncalc.dir\src\utils.cpp.obj -c C:\Users\SeanCa\Downloads\CalcSec8055\src\utils.cpp
 
 CMakeFiles/vulncalc.dir/src/utils.cpp.i: cmake_force
@@ -223,7 +208,6 @@ CMakeFiles/vulncalc.dir/src/utils.cpp.s: cmake_force
 
 # Object files for target vulncalc
 vulncalc_OBJECTS = \
-"CMakeFiles/vulncalc.dir/src/api_server.cpp.obj" \
 "CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj" \
 "CMakeFiles/vulncalc.dir/src/calculator.c.obj" \
 "CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj" \
@@ -237,7 +221,6 @@ vulncalc_OBJECTS = \
 # External object files for target vulncalc
 vulncalc_EXTERNAL_OBJECTS =
 
-vulncalc.exe: CMakeFiles/vulncalc.dir/src/api_server.cpp.obj
 vulncalc.exe: CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj
 vulncalc.exe: CMakeFiles/vulncalc.dir/src/calculator.c.obj
 vulncalc.exe: CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj
@@ -254,7 +237,7 @@ vulncalc.exe: C:/msys64/mingw64/lib/libz.dll.a
 vulncalc.exe: CMakeFiles/vulncalc.dir/linkLibs.rsp
 vulncalc.exe: CMakeFiles/vulncalc.dir/objects1.rsp
 vulncalc.exe: CMakeFiles/vulncalc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable vulncalc.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\SeanCa\Downloads\CalcSec8055\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable vulncalc.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\vulncalc.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

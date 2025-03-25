@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/SeanCa/Downloads/CalcSec8055/src/calculator.c" "CMakeFiles/vulncalc.dir/src/calculator.c.obj" "gcc" "CMakeFiles/vulncalc.dir/src/calculator.c.obj.d"
-  "C:/Users/SeanCa/Downloads/CalcSec8055/src/api_server.cpp" "CMakeFiles/vulncalc.dir/src/api_server.cpp.obj" "gcc" "CMakeFiles/vulncalc.dir/src/api_server.cpp.obj.d"
   "C:/Users/SeanCa/Downloads/CalcSec8055/src/archive_utils.cpp" "CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj" "gcc" "CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj.d"
   "C:/Users/SeanCa/Downloads/CalcSec8055/src/json_parser.cpp" "CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj" "gcc" "CMakeFiles/vulncalc.dir/src/json_parser.cpp.obj.d"
   "C:/Users/SeanCa/Downloads/CalcSec8055/src/logger.cpp" "CMakeFiles/vulncalc.dir/src/logger.cpp.obj" "gcc" "CMakeFiles/vulncalc.dir/src/logger.cpp.obj.d"

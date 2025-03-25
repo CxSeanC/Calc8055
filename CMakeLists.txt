@@ -4,49 +4,47 @@ project(VulnCalc)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
-# Collect source files
-file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.c")
+# Collect source files (omit api_server.cpp to skip cpprestsdk)
+file(GLOB_RECURSE SOURCES
+    "src/*.cpp"
+    "src/*.c"
+)
+
+# Optional: exclude files needing cpprestsdk
+list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/src/api_server.cpp")
 
 add_executable(vulncalc ${SOURCES})
 
-# Dependencies
+# Dependencies via pkg-config
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 pkg_check_modules(CURL REQUIRED libcurl)
 pkg_check_modules(SPDLOG REQUIRED spdlog)
 pkg_check_modules(JANSSON REQUIRED jansson)
 pkg_check_modules(ARCHIVE REQUIRED libarchive)
-find_package(Boost REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
 find_package(ZLIB REQUIRED)
 
-# Include directories
 include_directories(
     ${GTK3_INCLUDE_DIRS}
     ${CURL_INCLUDE_DIRS}
     ${SPDLOG_INCLUDE_DIRS}
     ${JANSSON_INCLUDE_DIRS}
     ${ARCHIVE_INCLUDE_DIRS}
-    ${Boost_INCLUDE_DIRS}
 )
 
-# Link libraries
 target_link_libraries(vulncalc
     ${GTK3_LIBRARIES}
     ${CURL_LIBRARIES}
     ${SPDLOG_LIBRARIES}
     ${JANSSON_LIBRARIES}
     ${ARCHIVE_LIBRARIES}
-    ${Boost_LIBRARIES}
     OpenSSL::SSL
     OpenSSL::Crypto
     Threads::Threads
     ZLIB::ZLIB
     iconv
-    dl
-    m
-    rt
     gio-2.0
     gobject-2.0
     gmodule-2.0
@@ -57,20 +55,8 @@ target_link_libraries(vulncalc
     gdk_pixbuf-2.0
     glib-2.0
     pangocairo-1.0
-    X11
-    Xext
-    Xinerama
-    Xi
-    Xrandr
-    Xcursor
-    Xcomposite
-    Xdamage
-    Xtst
-    freetype
-    fontconfig
 )
 
-# Add definitions if needed
 add_definitions(
     ${GTK3_CFLAGS_OTHER}
     ${CURL_CFLAGS_OTHER}

@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/vulncalc.dir/src/api_server.cpp.obj"
-  "CMakeFiles/vulncalc.dir/src/api_server.cpp.obj.d"
   "CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj"
   "CMakeFiles/vulncalc.dir/src/archive_utils.cpp.obj.d"
   "CMakeFiles/vulncalc.dir/src/calculator.c.obj"

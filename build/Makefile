@@ -128,30 +128,6 @@ vulncalc/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/build
 .PHONY : vulncalc/fast
 
-src/api_server.obj: src/api_server.cpp.obj
-.PHONY : src/api_server.obj
-
-# target to build an object file
-src/api_server.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/src/api_server.cpp.obj
-.PHONY : src/api_server.cpp.obj
-
-src/api_server.i: src/api_server.cpp.i
-.PHONY : src/api_server.i
-
-# target to preprocess a source file
-src/api_server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/src/api_server.cpp.i
-.PHONY : src/api_server.cpp.i
-
-src/api_server.s: src/api_server.cpp.s
-.PHONY : src/api_server.s
-
-# target to generate assembly for a file
-src/api_server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\vulncalc.dir\build.make CMakeFiles/vulncalc.dir/src/api_server.cpp.s
-.PHONY : src/api_server.cpp.s
-
 src/archive_utils.obj: src/archive_utils.cpp.obj
 .PHONY : src/archive_utils.obj
 
@@ -377,9 +353,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... vulncalc
-	@echo ... src/api_server.obj
-	@echo ... src/api_server.i
-	@echo ... src/api_server.s
 	@echo ... src/archive_utils.obj
 	@echo ... src/archive_utils.i
 	@echo ... src/archive_utils.s
