@@ -7,7 +7,7 @@
 int
 main()
 {
-#if defined __stub__get_timezone || defined __stub____get_timezone
+#if defined __stub__mkgmtime64 || defined __stub____mkgmtime64
   return 0;
 #else
 this system have stub

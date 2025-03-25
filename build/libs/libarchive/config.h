@@ -1,5 +1,4 @@
 /* config.h.  Generated from build/cmake/config.h.in by cmake configure */
-#define __LIBARCHIVE_CONFIG_H_INCLUDED 1
 
 /*
  * Ensure we have C99-style int64_t, etc, all defined.
@@ -23,14 +22,14 @@
 #define HAVE_UNSIGNED___INT64
 
 /* The sizes of various standard integer types. */
-#define SIZEOF_SHORT 2
-#define SIZEOF_INT 4
-#define SIZEOF_LONG 4
-#define SIZEOF_LONG_LONG 8
-#define SIZEOF_UNSIGNED_SHORT 2
-#define SIZEOF_UNSIGNED 4
-#define SIZEOF_UNSIGNED_LONG 4
-#define SIZEOF_UNSIGNED_LONG_LONG 8
+#define SIZE_OF_SHORT 2
+#define SIZE_OF_INT 4
+#define SIZE_OF_LONG 4
+#define SIZE_OF_LONG_LONG 8
+#define SIZE_OF_UNSIGNED_SHORT 2
+#define SIZE_OF_UNSIGNED 4
+#define SIZE_OF_UNSIGNED_LONG 4
+#define SIZE_OF_UNSIGNED_LONG_LONG 8
 
 /*
  * If we lack int64_t, define it to the first of __int64, int, long, and long long
@@ -41,17 +40,17 @@ typedef __int64 int64_t;
 #define HAVE_INT64_T
 #endif
 
-#if !defined(HAVE_INT64_T) && SIZEOF_INT == 8
+#if !defined(HAVE_INT64_T) && SIZE_OF_INT == 8
 typedef int int64_t;
 #define HAVE_INT64_T
 #endif
 
-#if !defined(HAVE_INT64_T) && SIZEOF_LONG == 8
+#if !defined(HAVE_INT64_T) && SIZE_OF_LONG == 8
 typedef long int64_t;
 #define HAVE_INT64_T
 #endif
 
-#if !defined(HAVE_INT64_T) && SIZEOF_LONG_LONG == 8
+#if !defined(HAVE_INT64_T) && SIZE_OF_LONG_LONG == 8
 typedef long long int64_t;
 #define HAVE_INT64_T
 #endif
@@ -63,12 +62,12 @@ typedef long long int64_t;
 /*
  * Similarly for int32_t
  */
-#if !defined(HAVE_INT32_T) && SIZEOF_INT == 4
+#if !defined(HAVE_INT32_T) && SIZE_OF_INT == 4
 typedef int int32_t;
 #define HAVE_INT32_T
 #endif
 
-#if !defined(HAVE_INT32_T) && SIZEOF_LONG == 4
+#if !defined(HAVE_INT32_T) && SIZE_OF_LONG == 4
 typedef long int32_t;
 #define HAVE_INT32_T
 #endif
@@ -80,12 +79,12 @@ typedef long int32_t;
 /*
  * Similarly for int16_t
  */
-#if !defined(HAVE_INT16_T) && SIZEOF_INT == 2
+#if !defined(HAVE_INT16_T) && SIZE_OF_INT == 2
 typedef int int16_t;
 #define HAVE_INT16_T
 #endif
 
-#if !defined(HAVE_INT16_T) && SIZEOF_SHORT == 2
+#if !defined(HAVE_INT16_T) && SIZE_OF_SHORT == 2
 typedef short int16_t;
 #define HAVE_INT16_T
 #endif
@@ -102,17 +101,17 @@ typedef unsigned __int64 uint64_t;
 #define HAVE_UINT64_T
 #endif
 
-#if !defined(HAVE_UINT64_T) && SIZEOF_UNSIGNED == 8
+#if !defined(HAVE_UINT64_T) && SIZE_OF_UNSIGNED == 8
 typedef unsigned uint64_t;
 #define HAVE_UINT64_T
 #endif
 
-#if !defined(HAVE_UINT64_T) && SIZEOF_UNSIGNED_LONG == 8
+#if !defined(HAVE_UINT64_T) && SIZE_OF_UNSIGNED_LONG == 8
 typedef unsigned long uint64_t;
 #define HAVE_UINT64_T
 #endif
 
-#if !defined(HAVE_UINT64_T) && SIZEOF_UNSIGNED_LONG_LONG == 8
+#if !defined(HAVE_UINT64_T) && SIZE_OF_UNSIGNED_LONG_LONG == 8
 typedef unsigned long long uint64_t;
 #define HAVE_UINT64_T
 #endif
@@ -125,12 +124,12 @@ typedef unsigned long long uint64_t;
 /*
  * Similarly for uint32_t
  */
-#if !defined(HAVE_UINT32_T) && SIZEOF_UNSIGNED == 4
+#if !defined(HAVE_UINT32_T) && SIZE_OF_UNSIGNED == 4
 typedef unsigned uint32_t;
 #define HAVE_UINT32_T
 #endif
 
-#if !defined(HAVE_UINT32_T) && SIZEOF_UNSIGNED_LONG == 4
+#if !defined(HAVE_UINT32_T) && SIZE_OF_UNSIGNED_LONG == 4
 typedef unsigned long uint32_t;
 #define HAVE_UINT32_T
 #endif
@@ -142,12 +141,12 @@ typedef unsigned long uint32_t;
 /*
  * Similarly for uint16_t
  */
-#if !defined(HAVE_UINT16_T) && SIZEOF_UNSIGNED == 2
+#if !defined(HAVE_UINT16_T) && SIZE_OF_UNSIGNED == 2
 typedef unsigned uint16_t;
 #define HAVE_UINT16_T
 #endif
 
-#if !defined(HAVE_UINT16_T) && SIZEOF_UNSIGNED_SHORT == 2
+#if !defined(HAVE_UINT16_T) && SIZE_OF_UNSIGNED_SHORT == 2
 typedef unsigned short uint16_t;
 #define HAVE_UINT16_T
 #endif
@@ -164,7 +163,7 @@ typedef unsigned char uint8_t;
 #define HAVE_UINT8_T
 #endif
 
-#if !defined(HAVE_UINT8_T)
+#if !defined(HAVE_UINT16_T)
 #error No 8-bit unsigned integer type was found.
 #endif
 
@@ -207,9 +206,6 @@ typedef uint64_t uintmax_t;
 /* MD5 via ARCHIVE_CRYPTO_MD5_LIBSYSTEM supported. */
 /* #undef ARCHIVE_CRYPTO_MD5_LIBSYSTEM */
 
-/* MD5 via ARCHIVE_CRYPTO_MD5_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_MD5_MBEDTLS */
-
 /* MD5 via ARCHIVE_CRYPTO_MD5_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_MD5_NETTLE */
 
@@ -217,16 +213,13 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_MD5_OPENSSL 1
 
 /* MD5 via ARCHIVE_CRYPTO_MD5_WIN supported. */
-#define ARCHIVE_CRYPTO_MD5_WIN 1
+/* #undef ARCHIVE_CRYPTO_MD5_WIN */
 
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_RMD160_LIBC */
 
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_RMD160_NETTLE */
-
-/* RMD160 via ARCHIVE_CRYPTO_RMD160_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_RMD160_MBEDTLS */
 
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_OPENSSL supported. */
 #define ARCHIVE_CRYPTO_RMD160_OPENSSL 1
@@ -237,9 +230,6 @@ typedef uint64_t uintmax_t;
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_LIBSYSTEM supported. */
 /* #undef ARCHIVE_CRYPTO_SHA1_LIBSYSTEM */
 
-/* SHA1 via ARCHIVE_CRYPTO_SHA1_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_SHA1_MBEDTLS */
-
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_SHA1_NETTLE */
 
@@ -247,7 +237,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA1_OPENSSL 1
 
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_WIN supported. */
-#define ARCHIVE_CRYPTO_SHA1_WIN 1
+/* #undef ARCHIVE_CRYPTO_SHA1_WIN */
 
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA256_LIBC */
@@ -261,9 +251,6 @@ typedef uint64_t uintmax_t;
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_LIBSYSTEM supported. */
 /* #undef ARCHIVE_CRYPTO_SHA256_LIBSYSTEM */
 
-/* SHA256 via ARCHIVE_CRYPTO_SHA256_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_SHA256_MBEDTLS */
-
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_SHA256_NETTLE */
 
@@ -271,7 +258,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA256_OPENSSL 1
 
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_WIN supported. */
-#define ARCHIVE_CRYPTO_SHA256_WIN 1
+/* #undef ARCHIVE_CRYPTO_SHA256_WIN */
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA384_LIBC */
@@ -285,9 +272,6 @@ typedef uint64_t uintmax_t;
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_LIBSYSTEM supported. */
 /* #undef ARCHIVE_CRYPTO_SHA384_LIBSYSTEM */
 
-/* SHA384 via ARCHIVE_CRYPTO_SHA384_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_SHA384_MBEDTLS */
-
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_SHA384_NETTLE */
 
@@ -295,7 +279,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA384_OPENSSL 1
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_WIN supported. */
-#define ARCHIVE_CRYPTO_SHA384_WIN 1
+/* #undef ARCHIVE_CRYPTO_SHA384_WIN */
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA512_LIBC */
@@ -309,9 +293,6 @@ typedef uint64_t uintmax_t;
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_LIBSYSTEM supported. */
 /* #undef ARCHIVE_CRYPTO_SHA512_LIBSYSTEM */
 
-/* SHA512 via ARCHIVE_CRYPTO_SHA512_MBEDTLS supported. */
-/* #undef ARCHIVE_CRYPTO_SHA512_MBEDTLS */
-
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_NETTLE supported. */
 /* #undef ARCHIVE_CRYPTO_SHA512_NETTLE */
 
@@ -319,7 +300,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA512_OPENSSL 1
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_WIN supported. */
-#define ARCHIVE_CRYPTO_SHA512_WIN 1
+/* #undef ARCHIVE_CRYPTO_SHA512_WIN */
 
 /* AIX xattr support */
 /* #undef ARCHIVE_XATTR_AIX */
@@ -334,16 +315,13 @@ typedef uint64_t uintmax_t;
 /* #undef ARCHIVE_XATTR_LINUX */
 
 /* Version number of bsdcpio */
-#define BSDCPIO_VERSION_STRING "3.8.0"
+#define BSDCPIO_VERSION_STRING "3.4.0"
 
 /* Version number of bsdtar */
-#define BSDTAR_VERSION_STRING "3.8.0"
+#define BSDTAR_VERSION_STRING "3.4.0"
 
 /* Version number of bsdcat */
-#define BSDCAT_VERSION_STRING "3.8.0"
-
-/* Version number of bsdunzip */
-#define BSDUNZIP_VERSION_STRING "3.8.0"
+#define BSDCAT_VERSION_STRING "3.4.0"
 
 /* Define to 1 if you have the `acl_create_entry' function. */
 /* #undef HAVE_ACL_CREATE_ENTRY */
@@ -387,7 +365,7 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <attr/xattr.h> header file. */
 /* #undef HAVE_ATTR_XATTR_H */
 
-/* Define to 1 if you have the <bcrypt.h> header file. */
+/* Define to 1 if you have the <Bcrypt.h> header file. */
 #define HAVE_BCRYPT_H 1
 
 /* Define to 1 if you have the <bsdxml.h> header file. */
@@ -591,12 +569,6 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `flistxattr' function. */
 /* #undef HAVE_FLISTXATTR */
 
-/* Define to 1 if you have the `fnmatch' function. */
-/* #undef HAVE_FNMATCH */
-
-/* Define to 1 if you have the <fnmatch.h> header file. */
-/* #undef HAVE_FNMATCH_H */
-
 /* Define to 1 if you have the `fork' function. */
 /* #undef HAVE_FORK */
 
@@ -644,9 +616,6 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the `getgrnam_r' function. */
 /* #undef HAVE_GETGRNAM_R */
-
-/* Define to 1 if you have the `getline' function. */
-/* #undef HAVE_GETLINE */
 
 /* Define to 1 if you have the `getpid' function. */
 #define HAVE_GETPID 1
@@ -729,20 +698,17 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `gcc' library (-lgcc). */
 /* #undef HAVE_LIBGCC */
 
-/* Define to 1 if you have the `iconv' library (-liconv). */
-#define HAVE_LIBICONV 1
-
 /* Define to 1 if you have the `lz4' library (-llz4). */
 #define HAVE_LIBLZ4 1
 
 /* Define to 1 if you have the `lzma' library (-llzma). */
 #define HAVE_LIBLZMA 1
 
+/* Define to 1 if you have the `lzmadec' library (-llzmadec). */
+/* #undef HAVE_LIBLZMADEC */
+
 /* Define to 1 if you have the `lzo2' library (-llzo2). */
 /* #undef HAVE_LIBLZO2 */
-
-/* Define to 1 if you have the `mbedcrypto' library (-lmbedcrypto). */
-/* #undef HAVE_LIBMBEDCRYPTO */
 
 /* Define to 1 if you have the `nettle' library (-lnettle). */
 /* #undef HAVE_LIBNETTLE */
@@ -753,12 +719,6 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `pcreposix' library (-lpcreposix). */
 /* #undef HAVE_LIBPCREPOSIX */
 
-/* Define to 1 if you have the `pcre2-8' library (-lpcre2-8). */
-/* #undef HAVE_LIBPCRE2 */
-
-/* Define to 1 if you have the `pcreposix' library (-lpcre2posix). */
-/* #undef HAVE_LIBPCRE2POSIX */
-
 /* Define to 1 if you have the `xml2' library (-lxml2). */
 #define HAVE_LIBXML2 1
 
@@ -768,29 +728,17 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <libxml/xmlwriter.h> header file. */
 #define HAVE_LIBXML_XMLWRITER_H 1
 
-/* Define to 1 if you have the <libxml/xmlversion.h> header file. */
-#define HAVE_LIBXML_XMLVERSION_H 1
-
 /* Define to 1 if you have the `z' library (-lz). */
 #define HAVE_LIBZ 1
 
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #define HAVE_LIBZSTD 1
 
-/* Define to 1 if you have the ZSTD_compressStream function. */
-#define HAVE_ZSTD_compressStream 1
-
-/* Define to 1 if you have the ZSTD_minCLevel function. */
-#define HAVE_ZSTD_minCLevel 1
-
 /* Define to 1 if you have the <limits.h> header file. */
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the `link' function. */
 /* #undef HAVE_LINK */
-
-/* Define to 1 if you have the `linkat' function. */
-/* #undef HAVE_LINKAT */
 
 /* Define to 1 if you have the <linux/fiemap.h> header file. */
 /* #undef HAVE_LINUX_FIEMAP_H */
@@ -853,29 +801,20 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <lz4.h> header file. */
 #define HAVE_LZ4_H 1
 
+/* Define to 1 if you have the <lzmadec.h> header file. */
+/* #undef HAVE_LZMADEC_H */
+
 /* Define to 1 if you have the <lzma.h> header file. */
 #define HAVE_LZMA_H 1
 
 /* Define to 1 if you have a working `lzma_stream_encoder_mt' function. */
-#define HAVE_LZMA_STREAM_ENCODER_MT 1
+/* #undef HAVE_LZMA_STREAM_ENCODER_MT */
 
 /* Define to 1 if you have the <lzo/lzo1x.h> header file. */
 /* #undef HAVE_LZO_LZO1X_H */
 
 /* Define to 1 if you have the <lzo/lzoconf.h> header file. */
 /* #undef HAVE_LZO_LZOCONF_H */
-
-/* Define to 1 if you have the <mbedtls/aes.h> header file. */
-/* #undef HAVE_MBEDTLS_AES_H */
-
-/* Define to 1 if you have the <mbedtls/md.h> header file. */
-/* #undef HAVE_MBEDTLS_MD_H */
-
-/* Define to 1 if you have the <mbedtls/pkcs5.h> header file. */
-/* #undef HAVE_MBEDTLS_PKCS5_H */
-
-/* Define to 1 if you have the <mbedtls/pkcs5.h> header file. */
-/* #undef HAVE_MBEDTLS_VERSION_H */
 
 /* Define to 1 if you have the `mbrtowc' function. */
 #define HAVE_MBRTOWC 1
@@ -922,20 +861,11 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <nettle/sha.h> header file. */
 /* #undef HAVE_NETTLE_SHA_H */
 
-/* Define to 1 if you have the <nettle/version.h> header file. */
-/* #undef HAVE_NETTLE_VERSION_H */
-
 /* Define to 1 if you have the `nl_langinfo' function. */
 /* #undef HAVE_NL_LANGINFO */
 
 /* Define to 1 if you have the `openat' function. */
 /* #undef HAVE_OPENAT */
-
-/* Define to 1 if you have the <openssl/evp.h> header file. */
-#define HAVE_OPENSSL_EVP_H 1
-
-/* Define to 1 if you have the <openssl/opensslv.h> header file. */
-#define HAVE_OPENSSL_OPENSSLV_H 1
 
 /* Define to 1 if you have the <paths.h> header file. */
 /* #undef HAVE_PATHS_H */
@@ -943,14 +873,11 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <pcreposix.h> header file. */
 /* #undef HAVE_PCREPOSIX_H */
 
-/* Define to 1 if you have the <pcre2posix.h> header file. */
-/* #undef HAVE_PCRE2POSIX_H */
-
 /* Define to 1 if you have the `pipe' function. */
 /* #undef HAVE_PIPE */
 
 /* Define to 1 if you have the `PKCS5_PBKDF2_HMAC_SHA1' function. */
-#define HAVE_PKCS5_PBKDF2_HMAC_SHA1 1
+/* #undef HAVE_PKCS5_PBKDF2_HMAC_SHA1 */
 
 /* Define to 1 if you have the `poll' function. */
 /* #undef HAVE_POLL */
@@ -1028,9 +955,6 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `strchr' function. */
 #define HAVE_STRCHR 1
 
-/* Define to 1 if you have the `strnlen' function. */
-#define HAVE_STRNLEN 1
-
 /* Define to 1 if you have the `strdup' function. */
 #define HAVE_STRDUP 1
 
@@ -1051,12 +975,6 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the `strrchr' function. */
 #define HAVE_STRRCHR 1
-
-/* Define to 1 if the system has the type `struct statfs'. */
-/* #undef HAVE_STRUCT_STATFS */
-
-/* Define to 1 if `f_iosize' is a member of `struct statfs'. */
-/* #undef HAVE_STRUCT_STATFS_F_IOSIZE */
 
 /* Define to 1 if `f_namemax' is a member of `struct statfs'. */
 /* #undef HAVE_STRUCT_STATFS_F_NAMEMAX */
@@ -1105,9 +1023,6 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the `symlink' function. */
 /* #undef HAVE_SYMLINK */
-
-/* Define to 1 if you have the `sysconf' function. */
-/* #undef HAVE_SYSCONF */
 
 /* Define to 1 if you have the <sys/acl.h> header file. */
 /* #undef HAVE_SYS_ACL_H */
@@ -1159,6 +1074,7 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
 
+
 /* Define to 1 if you have the <sys/sysmacros.h> header file. */
 /* #undef HAVE_SYS_SYSMACROS_H */
 
@@ -1182,12 +1098,6 @@ typedef uint64_t uintmax_t;
 
 /* Define to 1 if you have the <sys/xattr.h> header file. */
 /* #undef HAVE_SYS_XATTR_H */
-
-/* Define to 1 if you have the `tcgetattr' function. */
-/* #undef HAVE_TCGETATTR */
-
-/* Define to 1 if you have the `tcsetattr' function. */
-/* #undef HAVE_TCSETATTR */
 
 /* Define to 1 if you have the `timegm' function. */
 /* #undef HAVE_TIMEGM */
@@ -1288,8 +1198,8 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the <zstd.h> header file. */
 #define HAVE_ZSTD_H 1
 
-/* Define to 1 if you have the `ctime_s' function. */
-#define HAVE_CTIME_S 1
+/* Define to 1 if you have the `_ctime64_s' function. */
+#define HAVE__CTIME64_S 1
 
 /* Define to 1 if you have the `_fseeki64' function. */
 #define HAVE__FSEEKI64 1
@@ -1297,23 +1207,20 @@ typedef uint64_t uintmax_t;
 /* Define to 1 if you have the `_get_timezone' function. */
 /* #undef HAVE__GET_TIMEZONE */
 
-/* Define to 1 if you have the `gmtime_s' function. */
-#define HAVE_GMTIME_S 1
+/* Define to 1 if you have the `_localtime64_s' function. */
+#define HAVE__LOCALTIME64_S 1
 
-/* Define to 1 if you have the `localtime_s' function. */
-#define HAVE_LOCALTIME_S 1
-
-/* Define to 1 if you have the `_mkgmtime' function. */
-#define HAVE__MKGMTIME 1
+/* Define to 1 if you have the `_mkgmtime64' function. */
+#define HAVE__MKGMTIME64 1
 
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
 
 /* Version number of libarchive as a single integer */
-#define LIBARCHIVE_VERSION_NUMBER "3008000"
+#define LIBARCHIVE_VERSION_NUMBER "3004000"
 
 /* Version number of libarchive */
-#define LIBARCHIVE_VERSION_STRING "3.8.0"
+#define LIBARCHIVE_VERSION_STRING "3.4.0"
 
 /* Define to 1 if `lstat' dereferences a symlink specified with a trailing
    slash. */
@@ -1337,16 +1244,7 @@ typedef uint64_t uintmax_t;
 /* #undef STRERROR_R_CHAR_P */
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
-/* #undef TIME_WITH_SYS_TIME */
-
-/* Version number of package */
-/* #undef LIBATTR_PKGCONFIG_VERSION */
-
-/* Version number of package */
-/* #undef LIBACL_PKGCONFIG_VERSION */
-
-/* Version number of package */
-/* #undef LIBRICHACL_PKGCONFIG_VERSION */
+#define TIME_WITH_SYS_TIME 1
 
 /*
  * Some platform requires a macro to use extension functions.
@@ -1376,7 +1274,7 @@ typedef uint64_t uintmax_t;
 #endif /* SAFE_TO_DEFINE_EXTENSIONS */
 
 /* Version number of package */
-#define VERSION "3.8.0"
+#define VERSION "3.4.0"
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 #define _FILE_OFFSET_BITS 64
@@ -1389,15 +1287,15 @@ typedef uint64_t uintmax_t;
 
 /* Define to control Windows SDK version */
 #ifndef NTDDI_VERSION
-#define NTDDI_VERSION 0x0A000000
+#define NTDDI_VERSION 0x06010000
 #endif // NTDDI_VERSION
 
 #ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0A00
+#define _WIN32_WINNT 0x0601
 #endif // _WIN32_WINNT
 
 #ifndef WINVER
-#define WINVER 0x0A00
+#define WINVER 0x0601
 #endif // WINVER
 
 /* Define to empty if `const' does not conform to ANSI C. */

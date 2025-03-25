@@ -1,3 +1,0 @@
-C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/vulncalc.dir
-C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/edit_cache.dir
-C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/rebuild_cache.dir

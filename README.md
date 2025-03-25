@@ -38,20 +38,6 @@
 - **Third-Party Libraries**
   - More than 25 C/C++ open source libraries are used to create realistic dependency graphs for Software Composition Analysis (SCA) testing.
 
-## Dependencies (Partial List)
-
-The following are core dependencies used in this application:
-
-- `gtk+-3.0`
-- `cpprestsdk`
-- `libcurl`
-- `jansson`
-- `libarchive`
-- `spdlog`
-- `ncurses`
-- `boost`
-- `openssl`
-- `pkg-config`
 
 A complete list of dependencies is declared in the `CMakeLists.txt`.
 

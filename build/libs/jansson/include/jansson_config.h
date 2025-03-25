@@ -27,7 +27,7 @@
 
 /* Bring in the cmake-detected defines */
 #define HAVE_STDINT_H 1
-#define HAVE_INTTYPES_H 1
+/* #undef HAVE_INTTYPES_H */
 #define HAVE_SYS_TYPES_H 1
 
 /* Include our standard type header for the integer typedef */
