@@ -14,14 +14,17 @@
 # EXTERNAL cache entries
 ########################
 
-//Enable building amd64 assembly implementation
-AMD64:BOOL=OFF
+//Build sample applications.
+BUILD_SAMPLES:BOOL=ON
 
-//Enable building i686 assembly implementation
-ASM686:BOOL=OFF
+//Build shared libraries
+BUILD_SHARED_LIBS:BOOL=ON
 
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
+
+//Build tests.
+BUILD_TESTS:BOOL=ON
 
 //Path to a file.
 BZIP2_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
@@ -32,15 +35,29 @@ BZIP2_LIBRARY_DEBUG:FILEPATH=BZIP2_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 BZIP2_LIBRARY_RELEASE:FILEPATH=C:/msys64/mingw64/lib/libbz2.dll.a
 
+//Value Computed by CMake
+Boost_BINARY_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/boost
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=C:/msys64/mingw64/lib/cmake/Boost-1.87.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+//Value Computed by CMake
+Boost_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Boost_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/libs/boost
+
+//Link against boost statically.
+Boost_USE_STATIC_LIBS:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/msys64/mingw64/bin/addr2line.exe
 
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/msys64/mingw64/bin/ar.exe
-
-//For backwards compatibility, what version of CMake commands and
-// syntax should this version of CMake try to support.
-CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
 
 //Choose Release or Debug
 CMAKE_BUILD_TYPE:STRING=Release
@@ -49,7 +66,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=C:/msys64/mingw64/bin/c++.exe
+CMAKE_CXX_COMPILER:STRING=C:/msys64/mingw64/bin/c++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -78,7 +95,7 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=C:/msys64/mingw64/bin/cc.exe
+CMAKE_C_COMPILER:STRING=C:/msys64/mingw64/bin/cc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -105,6 +122,9 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Libraries linked by default with all C applications.
 CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+
+//Default filename postfix for libraries under configuration DEBUG
+CMAKE_DEBUG_POSTFIX:STRING=d
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=C:/msys64/mingw64/bin/dlltool.exe
@@ -185,7 +205,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/msys64/mingw64/bin/ld.exe
 
 //Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/msys64/usr/bin/make.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/msys64/mingw64/bin/mingw32-make.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -226,16 +246,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=VulnCalc
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.8.5
+CMAKE_PROJECT_VERSION:STATIC=1.15.1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=8
+CMAKE_PROJECT_VERSION_MINOR:STATIC=15
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=5
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -330,6 +350,69 @@ COVERAGE_COMMAND:FILEPATH=C:/msys64/mingw64/bin/gcov.exe
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
 
+//Enable to build 7-Zip packages
+CPACK_BINARY_7Z:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build Inno Setup packages
+CPACK_BINARY_INNOSETUP:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=ON
+
+//Enable to build NuGet packages
+CPACK_BINARY_NUGET:BOOL=OFF
+
+//Enable to build WiX packages
+CPACK_BINARY_WIX:BOOL=OFF
+
+//Enable to build ZIP packages
+CPACK_BINARY_ZIP:BOOL=OFF
+
+//Enable to build 7-Zip source packages
+CPACK_SOURCE_7Z:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=ON
+
+//Postfix tag for the cpprest abi
+CPPREST_ABI_TAG:STRING=_2_10
+
+//Exclude Brotli compression functionality.
+CPPREST_EXCLUDE_BROTLI:BOOL=ON
+
+//Exclude compression functionality.
+CPPREST_EXCLUDE_COMPRESSION:BOOL=OFF
+
+//Exclude websockets functionality.
+CPPREST_EXCLUDE_WEBSOCKETS:BOOL=OFF
+
+//Directory to install CMake config files.
+CPPREST_EXPORT_DIR:STRING=cmake/cpprestsdk
+
+//Internal use.
+CPPREST_FILEIO_IMPL:STRING=win32
+
+//Internal use.
+CPPREST_HTTP_CLIENT_IMPL:STRING=winhttp
+
+//Internal use.
+CPPREST_HTTP_LISTENER_IMPL:STRING=httpsys
+
+//Add install commands.
+CPPREST_INSTALL:BOOL=ON
+
+//Install header files.
+CPPREST_INSTALL_HEADERS:BOOL=ON
+
+//Internal use.
+CPPREST_PPLX_IMPL:STRING=win
+
+//Internal use.
+CPPREST_WEBSOCKETS_IMPL:STRING=wspp
+
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
 
@@ -338,6 +421,9 @@ CTEST_SUBMIT_RETRY_DELAY:STRING=5
 
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
+
+//Ignore CRC errors during parsing (For fuzzing)
+DONT_FAIL_ON_CRC_ERROR:BOOL=OFF
 
 //Enable ACL support
 ENABLE_ACL:BOOL=ON
@@ -376,6 +462,9 @@ ENABLE_INSTALL:BOOL=ON
 //Enable the use of the system LIBB2 library if found
 ENABLE_LIBB2:BOOL=ON
 
+//Enable the use of the system LibGCC library if found
+ENABLE_LIBGCC:BOOL=ON
+
 //Enable the use of the system libxml2 library if found
 ENABLE_LIBXML2:BOOL=ON
 
@@ -388,14 +477,17 @@ ENABLE_LZMA:BOOL=ON
 //Enable the use of the system LZO library if found
 ENABLE_LZO:BOOL=OFF
 
-//Enable the use of the system LibGCC library if found
-ENABLE_LibGCC:BOOL=ON
+//Enable use of mbed TLS
+ENABLE_MBEDTLS:BOOL=OFF
 
 //Enable use of Nettle
-ENABLE_NETTLE:BOOL=ON
+ENABLE_NETTLE:BOOL=OFF
 
 //Enable use of OpenSSL
 ENABLE_OPENSSL:BOOL=ON
+
+//Enable the use of the system PCRE2POSIX library if found
+ENABLE_PCRE2POSIX:BOOL=ON
 
 //Enable the use of the system PCREPOSIX library if found
 ENABLE_PCREPOSIX:BOOL=ON
@@ -424,29 +516,14 @@ ENABLE_ZLIB:BOOL=ON
 //Enable the use of the system zstd library if found
 ENABLE_ZSTD:BOOL=ON
 
-//Single output directory for building all executables.
-EXECUTABLE_OUTPUT_PATH:PATH=
+//Path to a program.
+GCOV_EXECUTABLE:FILEPATH=C:/msys64/mingw64/bin/gcov.exe
 
 //Path to a program.
-GITCOMMAND:FILEPATH=GITCOMMAND-NOTFOUND
+GITCOMMAND:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //Path to a file.
 ICONV_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
-
-//Installation directory for executables
-INSTALL_BIN_DIR:PATH=C:/Program Files (x86)/VulnCalc/bin
-
-//Installation directory for headers
-INSTALL_INC_DIR:PATH=C:/Program Files (x86)/VulnCalc/include
-
-//Installation directory for libraries
-INSTALL_LIB_DIR:PATH=C:/Program Files (x86)/VulnCalc/lib
-
-//Installation directory for manual pages
-INSTALL_MAN_DIR:PATH=C:/Program Files (x86)/VulnCalc/share/man
-
-//Installation directory for pkgconfig (.pc) files
-INSTALL_PKGCONFIG_DIR:PATH=C:/Program Files (x86)/VulnCalc/share/pkgconfig
 
 //Build documentation (uses python-sphinx).
 JANSSON_BUILD_DOCS:BOOL=ON
@@ -456,9 +533,6 @@ JANSSON_BUILD_SHARED_LIBS:BOOL=OFF
 
 //Compile example applications
 JANSSON_EXAMPLES:BOOL=ON
-
-//Jansson include directories
-JANSSON_INCLUDE_DIRS:PATH=C:/Users/SeanCa/Downloads/CalcSec8055/libs/jansson/include;C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/jansson/include
 
 //Number of buckets new object hashtables contain is 2 raised to
 // this power. The default is 3, so empty hashtables contain 2^3
@@ -479,9 +553,6 @@ JANSSON_INSTALL_INCLUDE_DIR:PATH=include
 
 //Installation directory for libraries
 JANSSON_INSTALL_LIB_DIR:PATH=lib
-
-//jansson libraries
-JANSSON_LIBRARIES:STRING=jansson
 
 //Enable valgrind tests.
 JANSSON_TEST_WITH_VALGRIND:BOOL=OFF
@@ -509,9 +580,6 @@ LIBLZMA_LIBRARY_DEBUG:FILEPATH=LIBLZMA_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 LIBLZMA_LIBRARY_RELEASE:FILEPATH=C:/msys64/mingw64/lib/liblzma.dll.a
-
-//Single output directory for building all libraries.
-LIBRARY_OUTPUT_PATH:PATH=
 
 //Path to a file.
 LIBXML2_INCLUDE_DIR:PATH=C:/msys64/mingw64/include/libxml2
@@ -541,12 +609,6 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Path to a file.
-NETTLE_INCLUDE_DIR:PATH=NETTLE_INCLUDE_DIR-NOTFOUND
-
-//Path to a library.
-NETTLE_LIBRARY:FILEPATH=NETTLE_LIBRARY-NOTFOUND
-
-//Path to a file.
 OPENSSL_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
 
 //Arguments to supply to pkg-config
@@ -557,6 +619,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=C:/msys64/mingw64/bin/pkg-config.exe
 
 //Choose what library should provide POSIX regular expression support
 POSIX_REGEX_LIB:STRING=AUTO
+
+//Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=C:/msys64/mingw64/bin/python.exe
 
 //Path to a file.
 REGEX_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
@@ -580,6 +645,9 @@ SPDLOG_BUILD_EXAMPLE:BOOL=OFF
 //Build header only example
 SPDLOG_BUILD_EXAMPLE_HO:BOOL=OFF
 
+//Build position independent code (-fPIC)
+SPDLOG_BUILD_PIC:BOOL=OFF
+
 //Build shared library
 SPDLOG_BUILD_SHARED:BOOL=OFF
 
@@ -591,6 +659,9 @@ SPDLOG_BUILD_TESTS_HO:BOOL=OFF
 
 //Enable compiler warnings
 SPDLOG_BUILD_WARNINGS:BOOL=OFF
+
+//non supported option
+SPDLOG_CLOCK_COARSE:BOOL=OFF
 
 //Disable default logger creation
 SPDLOG_DISABLE_DEFAULT_LOGGER:BOOL=OFF
@@ -604,6 +675,10 @@ SPDLOG_FMT_EXTERNAL:BOOL=OFF
 
 //Use external fmt header-only library instead of bundled
 SPDLOG_FMT_EXTERNAL_HO:BOOL=OFF
+
+//Use the unlocked variant of fwrite. Leave this on unless your
+// libc doesn't have it
+SPDLOG_FWRITE_UNLOCKED:BOOL=ON
 
 //Generate the install target
 SPDLOG_INSTALL:BOOL=OFF
@@ -628,8 +703,20 @@ SPDLOG_PREVENT_CHILD_FD:BOOL=OFF
 //Enable address sanitizer in tests
 SPDLOG_SANITIZE_ADDRESS:BOOL=OFF
 
+//Enable thread sanitizer in tests
+SPDLOG_SANITIZE_THREAD:BOOL=OFF
+
+//Include as system headers (skip for clang-tidy).
+SPDLOG_SYSTEM_INCLUDES:BOOL=OFF
+
 //run clang-tidy
 SPDLOG_TIDY:BOOL=OFF
+
+//Use std::format instead of fmt library.
+SPDLOG_USE_STD_FORMAT:BOOL=OFF
+
+//Support wchar output to console
+SPDLOG_WCHAR_CONSOLE:BOOL=OFF
 
 //Support wchar filenames
 SPDLOG_WCHAR_FILENAMES:BOOL=OFF
@@ -641,10 +728,10 @@ SPDLOG_WCHAR_SUPPORT:BOOL=OFF
 SSL_EAY:FILEPATH=C:/msys64/mingw64/lib/libssl.dll.a
 
 //The sphinx-build Python script.
-Sphinx-build_EXECUTABLE:FILEPATH=Sphinx-build_EXECUTABLE-NOTFOUND
+Sphinx-build_EXECUTABLE:FILEPATH=C:/Users/SeanCa/AppData/Local/anaconda3/Scripts/sphinx-build.exe
 
-//Installation prefix of Sphinx (docutils).
-Sphinx_DIR:PATH=
+//Installation directory of Sphinx tools.
+Sphinx_DIR:PATH=C:/Users/SeanCa/AppData/Local/anaconda3/Scripts
 
 //Use /dev/urandom to seed the hash function.
 USE_URANDOM:BOOL=ON
@@ -661,17 +748,47 @@ VulnCalc_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 VulnCalc_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055
 
+//The directory containing a CMake configuration file for WEBSOCKETPP.
+WEBSOCKETPP_DIR:PATH=WEBSOCKETPP_DIR-NOTFOUND
+
+//Treat Warnings as Errors.
+WERROR:BOOL=ON
+
 //Set Windows version to use (Windows only)
-WINDOWS_VERSION:STRING=WIN7
+WINDOWS_VERSION:STRING=WIN10
+
+//Enable building libminizip contrib library
+ZLIB_BUILD_MINIZIP:BOOL=OFF
+
+//Enable building zlib shared library
+ZLIB_BUILD_SHARED:BOOL=ON
+
+//Enable building zlib static library
+ZLIB_BUILD_STATIC:BOOL=ON
+
+//Enable Zlib Examples as tests
+ZLIB_BUILD_TESTING:BOOL=ON
+
+//zconf.h.cmakein was created
+ZLIB_CONF_WRITTEN:BOOL=TRUE
 
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+//Enable installation of zlib
+ZLIB_INSTALL:BOOL=ON
+
+//Install a copy as zlib1.dll
+ZLIB_INSTALL_COMPAT_DLL:BOOL=ON
 
 //Path to a library.
 ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
 ZLIB_LIBRARY_RELEASE:FILEPATH=C:/msys64/mingw64/lib/libz.dll.a
+
+//prefix for all types and library functions, see zconf.h.in
+ZLIB_PREFIX:BOOL=OFF
 
 //Path to a file.
 ZSTD_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
@@ -680,10 +797,31 @@ ZSTD_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
 ZSTD_LIBRARY:FILEPATH=C:/msys64/mingw64/lib/libzstd.dll.a
 
 //Dependencies for the target
-archive_LIB_DEPENDS:STATIC=general;C:/msys64/mingw64/lib/libz.dll.a;general;C:/msys64/mingw64/lib/libbz2.dll.a;general;C:/msys64/mingw64/lib/liblzma.dll.a;general;C:/msys64/mingw64/lib/libb2.dll.a;general;C:/msys64/mingw64/lib/liblz4.dll.a;general;C:/msys64/mingw64/lib/libzstd.dll.a;general;Bcrypt;general;C:/msys64/mingw64/lib/libcrypto.dll.a;general;C:/msys64/mingw64/lib/libiconv.dll.a;general;C:/msys64/mingw64/lib/libcharset.dll.a;general;C:/msys64/mingw64/lib/libxml2.dll.a;general;C:/msys64/mingw64/lib/libregex.dll.a;general;C:/msys64/mingw64/lib/libssl.dll.a;
+archive_LIB_DEPENDS:STATIC=general;C:/msys64/mingw64/lib/libz.dll.a;general;C:/msys64/mingw64/lib/libbz2.dll.a;general;C:/msys64/mingw64/lib/liblzma.dll.a;general;C:/msys64/mingw64/lib/libb2.dll.a;general;C:/msys64/mingw64/lib/liblz4.dll.a;general;C:/msys64/mingw64/lib/libzstd.dll.a;general;bcrypt;general;C:/msys64/mingw64/lib/libcrypto.dll.a;general;C:/msys64/mingw64/lib/libiconv.dll.a;general;C:/msys64/mingw64/lib/libcharset.dll.a;general;C:/msys64/mingw64/lib/libxml2.dll.a;general;C:/msys64/mingw64/lib/libregex.dll.a;general;C:/msys64/mingw64/lib/libssl.dll.a;
 
 //Dependencies for the target
-archive_static_LIB_DEPENDS:STATIC=general;C:/msys64/mingw64/lib/libz.dll.a;general;C:/msys64/mingw64/lib/libbz2.dll.a;general;C:/msys64/mingw64/lib/liblzma.dll.a;general;C:/msys64/mingw64/lib/libb2.dll.a;general;C:/msys64/mingw64/lib/liblz4.dll.a;general;C:/msys64/mingw64/lib/libzstd.dll.a;general;Bcrypt;general;C:/msys64/mingw64/lib/libcrypto.dll.a;general;C:/msys64/mingw64/lib/libiconv.dll.a;general;C:/msys64/mingw64/lib/libcharset.dll.a;general;C:/msys64/mingw64/lib/libxml2.dll.a;general;C:/msys64/mingw64/lib/libregex.dll.a;general;C:/msys64/mingw64/lib/libssl.dll.a;
+archive_static_LIB_DEPENDS:STATIC=general;C:/msys64/mingw64/lib/libz.dll.a;general;C:/msys64/mingw64/lib/libbz2.dll.a;general;C:/msys64/mingw64/lib/liblzma.dll.a;general;C:/msys64/mingw64/lib/libb2.dll.a;general;C:/msys64/mingw64/lib/liblz4.dll.a;general;C:/msys64/mingw64/lib/libzstd.dll.a;general;bcrypt;general;C:/msys64/mingw64/lib/libcrypto.dll.a;general;C:/msys64/mingw64/lib/libiconv.dll.a;general;C:/msys64/mingw64/lib/libcharset.dll.a;general;C:/msys64/mingw64/lib/libxml2.dll.a;general;C:/msys64/mingw64/lib/libregex.dll.a;general;C:/msys64/mingw64/lib/libssl.dll.a;
+
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=C:/msys64/mingw64/lib/cmake/boost_headers-1.87.0
+
+//Value Computed by CMake
+cpprestsdk-root_BINARY_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/cpprestsdk
+
+//Value Computed by CMake
+cpprestsdk-root_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+cpprestsdk-root_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/libs/cpprestsdk
+
+//Value Computed by CMake
+cpprestsdk_BINARY_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/cpprestsdk/Release
+
+//Value Computed by CMake
+cpprestsdk_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+cpprestsdk_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/libs/cpprestsdk/Release
 
 //Value Computed by CMake
 jansson_BINARY_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/jansson
@@ -702,6 +840,12 @@ libarchive_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 libarchive_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive
+
+//Path to a library.
+pkgcfg_lib_ARCHIVE_archive:FILEPATH=C:/msys64/mingw64/lib/libarchive.dll.a
+
+//Path to a library.
+pkgcfg_lib_CURL_curl:FILEPATH=C:/msys64/mingw64/lib/libcurl.dll.a
 
 //Path to a library.
 pkgcfg_lib_GTK3_atk-1.0:FILEPATH=C:/msys64/mingw64/lib/libatk-1.0.dll.a
@@ -788,7 +932,19 @@ pkgcfg_lib_GTK3_winspool:FILEPATH=C:/msys64/mingw64/lib/libwinspool.a
 pkgcfg_lib_GTK3_z:FILEPATH=C:/msys64/mingw64/lib/libz.dll.a
 
 //Path to a library.
+pkgcfg_lib_JANSSON_jansson:FILEPATH=C:/msys64/mingw64/lib/libjansson.dll.a
+
+//Path to a library.
+pkgcfg_lib_LIBB2_b2:FILEPATH=C:/msys64/mingw64/lib/libb2.dll.a
+
+//Path to a library.
 pkgcfg_lib_PC_LIBXML_xml2:FILEPATH=C:/msys64/mingw64/lib/libxml2.dll.a
+
+//Path to a library.
+pkgcfg_lib_SPDLOG_fmt:FILEPATH=C:/msys64/mingw64/lib/libfmt.dll.a
+
+//Path to a library.
+pkgcfg_lib_SPDLOG_spdlog:FILEPATH=C:/msys64/mingw64/lib/libspdlog.dll.a
 
 //Value Computed by CMake
 spdlog_BINARY_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/build/libs/spdlog
@@ -808,27 +964,42 @@ zlib_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 zlib_SOURCE_DIR:STATIC=C:/Users/SeanCa/Downloads/CalcSec8055/libs/zlib
 
+{CMAKE_C_FLAGS:STRING=
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+ARCHIVE_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+ARCHIVE_CFLAGS_I:INTERNAL=
+ARCHIVE_CFLAGS_OTHER:INTERNAL=
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_MD5_LIBC:INTERNAL=FALSE
+//Result of TRY_COMPILE
+ARCHIVE_CRYPTO_MD5_LIBMD:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_MD5_LIBSYSTEM:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_MD5_OPENSSL:INTERNAL=TRUE
 //Result of TRY_COMPILE
+ARCHIVE_CRYPTO_MD5_WIN:INTERNAL=TRUE
+//Result of TRY_COMPILE
 ARCHIVE_CRYPTO_RMD160_LIBC:INTERNAL=FALSE
+//Result of TRY_COMPILE
+ARCHIVE_CRYPTO_RMD160_LIBMD:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_RMD160_OPENSSL:INTERNAL=TRUE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA1_LIBC:INTERNAL=FALSE
 //Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA1_LIBMD:INTERNAL=FALSE
+//Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA1_LIBSYSTEM:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA1_OPENSSL:INTERNAL=TRUE
+//Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA1_WIN:INTERNAL=TRUE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA256_LIBC:INTERNAL=FALSE
 //Result of TRY_COMPILE
@@ -836,9 +1007,13 @@ ARCHIVE_CRYPTO_SHA256_LIBC2:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA256_LIBC3:INTERNAL=FALSE
 //Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA256_LIBMD:INTERNAL=FALSE
+//Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA256_LIBSYSTEM:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA256_OPENSSL:INTERNAL=TRUE
+//Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA256_WIN:INTERNAL=TRUE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA384_LIBC:INTERNAL=FALSE
 //Result of TRY_COMPILE
@@ -850,15 +1025,53 @@ ARCHIVE_CRYPTO_SHA384_LIBSYSTEM:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA384_OPENSSL:INTERNAL=TRUE
 //Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA384_WIN:INTERNAL=TRUE
+//Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA512_LIBC:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA512_LIBC2:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA512_LIBC3:INTERNAL=FALSE
 //Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA512_LIBMD:INTERNAL=FALSE
+//Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA512_LIBSYSTEM:INTERNAL=FALSE
 //Result of TRY_COMPILE
 ARCHIVE_CRYPTO_SHA512_OPENSSL:INTERNAL=TRUE
+//Result of TRY_COMPILE
+ARCHIVE_CRYPTO_SHA512_WIN:INTERNAL=TRUE
+ARCHIVE_FOUND:INTERNAL=1
+ARCHIVE_INCLUDEDIR:INTERNAL=C:/msys64/mingw64/include
+ARCHIVE_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+ARCHIVE_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-larchive
+ARCHIVE_LDFLAGS_OTHER:INTERNAL=
+ARCHIVE_LIBDIR:INTERNAL=C:/msys64/mingw64/lib
+ARCHIVE_LIBRARIES:INTERNAL=archive
+ARCHIVE_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+ARCHIVE_LIBS:INTERNAL=
+ARCHIVE_LIBS_L:INTERNAL=
+ARCHIVE_LIBS_OTHER:INTERNAL=
+ARCHIVE_LIBS_PATHS:INTERNAL=
+ARCHIVE_MODULE_NAME:INTERNAL=libarchive
+ARCHIVE_PREFIX:INTERNAL=C:/msys64/mingw64
+ARCHIVE_STATIC_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include;-DLIBARCHIVE_STATIC
+ARCHIVE_STATIC_CFLAGS_I:INTERNAL=
+ARCHIVE_STATIC_CFLAGS_OTHER:INTERNAL=-DLIBARCHIVE_STATIC
+ARCHIVE_STATIC_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+ARCHIVE_STATIC_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-larchive;-lregex;-lexpat;-lzstd;-llz4;-lb2;-lbz2;-lz;-llzma;-lbcrypt;-liconv;-lcrypto;-lws2_32;-lgdi32;-lcrypt32
+ARCHIVE_STATIC_LDFLAGS_OTHER:INTERNAL=
+ARCHIVE_STATIC_LIBDIR:INTERNAL=
+ARCHIVE_STATIC_LIBRARIES:INTERNAL=archive;regex;expat;zstd;lz4;b2;bz2;z;lzma;bcrypt;iconv;crypto;ws2_32;gdi32;crypt32
+ARCHIVE_STATIC_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+ARCHIVE_STATIC_LIBS:INTERNAL=
+ARCHIVE_STATIC_LIBS_L:INTERNAL=
+ARCHIVE_STATIC_LIBS_OTHER:INTERNAL=
+ARCHIVE_STATIC_LIBS_PATHS:INTERNAL=
+ARCHIVE_VERSION:INTERNAL=3.7.8
+ARCHIVE_libarchive_INCLUDEDIR:INTERNAL=
+ARCHIVE_libarchive_LIBDIR:INTERNAL=
+ARCHIVE_libarchive_PREFIX:INTERNAL=
+ARCHIVE_libarchive_VERSION:INTERNAL=
 //ADVANCED property for variable: BZIP2_INCLUDE_DIR
 BZIP2_INCLUDE_DIR-ADVANCED:INTERNAL=0
 //ADVANCED property for variable: BZIP2_LIBRARY_DEBUG
@@ -867,6 +1080,8 @@ BZIP2_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 BZIP2_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Have symbol BZ2_bzCompressInit
 BZIP2_NEED_PREFIX:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -927,6 +1142,8 @@ CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_C_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cmake-gui.exe
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=Unknown
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -942,7 +1159,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=MSYS Makefiles
+CMAKE_GENERATOR:INTERNAL=MinGW Makefiles
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
@@ -988,6 +1205,8 @@ CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
+//Name of CMakeLists files to read
+CMAKE_LIST_FILE_NAME:INTERNAL=CMakeLists.txt
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
 CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
@@ -1003,7 +1222,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1063,16 +1282,71 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
 COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_7Z
+CPACK_BINARY_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_INNOSETUP
+CPACK_BINARY_INNOSETUP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NUGET
+CPACK_BINARY_NUGET-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_WIX
+CPACK_BINARY_WIX-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_ZIP
+CPACK_BINARY_ZIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_7Z
+CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
+CURL_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+CURL_CFLAGS_I:INTERNAL=
+CURL_CFLAGS_OTHER:INTERNAL=
+CURL_FOUND:INTERNAL=1
+CURL_INCLUDEDIR:INTERNAL=C:/msys64/mingw64/include
+CURL_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+CURL_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lcurl
+CURL_LDFLAGS_OTHER:INTERNAL=
+CURL_LIBDIR:INTERNAL=C:/msys64/mingw64/lib
+CURL_LIBRARIES:INTERNAL=curl
+CURL_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+CURL_LIBS:INTERNAL=
+CURL_LIBS_L:INTERNAL=
+CURL_LIBS_OTHER:INTERNAL=
+CURL_LIBS_PATHS:INTERNAL=
+CURL_MODULE_NAME:INTERNAL=libcurl
+CURL_PREFIX:INTERNAL=C:/msys64/mingw64
+CURL_STATIC_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include;-DCURL_STATICLIB;-DNGHTTP2_STATICLIB;-DNGHTTP3_STATICLIB
+CURL_STATIC_CFLAGS_I:INTERNAL=
+CURL_STATIC_CFLAGS_OTHER:INTERNAL=-DCURL_STATICLIB;-DNGHTTP2_STATICLIB;-DNGHTTP3_STATICLIB
+CURL_STATIC_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+CURL_STATIC_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lcurl;-lssl;-lcrypto;-lz;-lwldap32;-lws2_32;-lbcrypt;-ladvapi32;-lcrypt32;-lssh2;-lws2_32;-L/mingw64/lib;-L/mingw64/lib;-L/mingw64/lib;-lssl;-lcrypto;-lws2_32;-lgdi32;-lcrypt32;-lz;-lbrotlidec;-lbrotlicommon;-lzstd;-lnghttp2;-lnghttp3;-lpsl;-lunistring;-lws2_32;-liconv;-lidn2;-L/mingw64/lib;-liconv;-L/mingw64/lib;-lunistring
+CURL_STATIC_LDFLAGS_OTHER:INTERNAL=
+CURL_STATIC_LIBDIR:INTERNAL=
+CURL_STATIC_LIBRARIES:INTERNAL=curl;ssl;crypto;z;wldap32;ws2_32;bcrypt;advapi32;crypt32;ssh2;ws2_32;ssl;crypto;ws2_32;gdi32;crypt32;z;brotlidec;brotlicommon;zstd;nghttp2;nghttp3;psl;unistring;ws2_32;iconv;idn2;iconv;unistring
+CURL_STATIC_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib;/mingw64/lib;/mingw64/lib;/mingw64/lib;/mingw64/lib;/mingw64/lib
+CURL_STATIC_LIBS:INTERNAL=
+CURL_STATIC_LIBS_L:INTERNAL=
+CURL_STATIC_LIBS_OTHER:INTERNAL=
+CURL_STATIC_LIBS_PATHS:INTERNAL=
+CURL_VERSION:INTERNAL=8.12.1
+CURL_libcurl_INCLUDEDIR:INTERNAL=
+CURL_libcurl_LIBDIR:INTERNAL=
+CURL_libcurl_PREFIX:INTERNAL=
+CURL_libcurl_VERSION:INTERNAL=
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 //CHECK_TYPE_SIZE: sizeof(dev_t)
 DEV_T:INTERNAL=4
 //Details about finding BZip2
 FIND_PACKAGE_MESSAGE_DETAILS_BZip2:INTERNAL=[C:/msys64/mingw64/lib/libbz2.dll.a][C:/msys64/mingw64/include][v1.0.8()]
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/msys64/mingw64/lib/cmake/Boost-1.87.0/BoostConfig.cmake][c ][v1.87.0()]
 //Details about finding LIBB2
 FIND_PACKAGE_MESSAGE_DETAILS_LIBB2:INTERNAL=[C:/msys64/mingw64/lib/libb2.dll.a][C:/msys64/mingw64/include][v()]
 //Details about finding LZ4
@@ -1088,7 +1362,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[C:/msys64/mingw64/bin/pkg-confi
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[C:/msys64/mingw64/lib/libz.dll.a][C:/msys64/mingw64/include][c ][v1.3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[C:/msys64/mingw64/lib/libz.dll.a][C:/msys64/mingw64/include][c ][v1.3.1(1.2.1)]
 //Details about finding ZSTD
 FIND_PACKAGE_MESSAGE_DETAILS_ZSTD:INTERNAL=[C:/msys64/mingw64/lib/libzstd.dll.a][C:/msys64/mingw64/include][v()]
 //CHECK_TYPE_SIZE: gid_t unknown
@@ -1130,6 +1404,8 @@ GTK3_gtk+-3.0_INCLUDEDIR:INTERNAL=
 GTK3_gtk+-3.0_LIBDIR:INTERNAL=
 GTK3_gtk+-3.0_PREFIX:INTERNAL=
 GTK3_gtk+-3.0_VERSION:INTERNAL=
+//Test HAS_NO_FORMAT_TRUNCATION
+HAS_NO_FORMAT_TRUNCATION:INTERNAL=1
 //Have function acl
 HAVE_ACL:INTERNAL=
 //Test HAVE_ACL_ENTRY_T
@@ -1148,7 +1424,7 @@ HAVE_ARC4RANDOM_BUF:INTERNAL=
 HAVE_ATOMIC_BUILTINS:INTERNAL=1
 //Have includes sys/types.h;attr/xattr.h
 HAVE_ATTR_XATTR_H:INTERNAL=
-//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;Bcrypt.h
+//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;bcrypt.h
 HAVE_BCRYPT_H:INTERNAL=1
 //Have function chflags
 HAVE_CHFLAGS:INTERNAL=
@@ -1162,6 +1438,8 @@ HAVE_CLOSE:INTERNAL=1
 HAVE_COPYFILE_H:INTERNAL=
 //Have function ctime_r
 HAVE_CTIME_R:INTERNAL=
+//Have symbol ctime_s
+HAVE_CTIME_S:INTERNAL=1
 //Have include sys/types.h;ctype.h
 HAVE_CTYPE_H:INTERNAL=1
 //Have function cygwin_conv_path
@@ -1230,6 +1508,10 @@ HAVE_FCNTL:INTERNAL=
 HAVE_FCNTL_H:INTERNAL=1
 //Have function fdopendir
 HAVE_FDOPENDIR:INTERNAL=
+//Have function fnmatch
+HAVE_FNMATCH:INTERNAL=
+//Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;fnmatch.h
+HAVE_FNMATCH_H:INTERNAL=
 //Have function fork
 HAVE_FORK:INTERNAL=
 //Have function fseeko
@@ -1250,12 +1532,16 @@ HAVE_FUTIMENS:INTERNAL=
 HAVE_FUTIMES:INTERNAL=
 //Have function futimesat
 HAVE_FUTIMESAT:INTERNAL=
+//Have symbol _fwrite_nolock
+HAVE_FWRITE_UNLOCKED:INTERNAL=
 //Have function geteuid
 HAVE_GETEUID:INTERNAL=
 //Have function getgrgid_r
 HAVE_GETGRGID_R:INTERNAL=
 //Have function getgrnam_r
 HAVE_GETGRNAM_R:INTERNAL=
+//Have function getline
+HAVE_GETLINE:INTERNAL=
 //Have function getpid
 HAVE_GETPID:INTERNAL=1
 //Have function getpwnam_r
@@ -1270,6 +1556,8 @@ HAVE_GETVFSBYNAME:INTERNAL=
 HAVE_GID_T:INTERNAL=FALSE
 //Have function gmtime_r
 HAVE_GMTIME_R:INTERNAL=
+//Have symbol gmtime_s
+HAVE_GMTIME_S:INTERNAL=1
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;grp.h
 HAVE_GRP_H:INTERNAL=
 //Test HAVE_ICONV_libc_
@@ -1318,14 +1606,18 @@ HAVE_LIBATTR_GNU:INTERNAL=
 HAVE_LIBRICHACL:INTERNAL=
 //Have include libxml/xmlreader.h
 HAVE_LIBXML_XMLREADER_H:INTERNAL=1
+//Have include libxml/xmlversion.h
+HAVE_LIBXML_XMLVERSION_H:INTERNAL=1
 //Have include libxml/xmlwriter.h
 HAVE_LIBXML_XMLWRITER_H:INTERNAL=1
-//Have function ZSTD_compressStream
+//Have function ZSTD_decompressStream
 HAVE_LIBZSTD:INTERNAL=1
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h
 HAVE_LIMITS_H:INTERNAL=1
 //Have function link
 HAVE_LINK:INTERNAL=
+//Have function linkat
+HAVE_LINKAT:INTERNAL=
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;linux/fiemap.h
 HAVE_LINUX_FIEMAP_H:INTERNAL=
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;linux/fs.h
@@ -1344,6 +1636,8 @@ HAVE_LOCALE_CHARSET:INTERNAL=ON
 HAVE_LOCALE_H:INTERNAL=1
 //Have function localtime_r
 HAVE_LOCALTIME_R:INTERNAL=
+//Have symbol localtime_s
+HAVE_LOCALTIME_S:INTERNAL=1
 //Result of TRY_COMPILE
 HAVE_LONG_INT:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -1355,7 +1649,7 @@ HAVE_LUTIMES:INTERNAL=
 //Have include lz4hc.h
 HAVE_LZ4HC_H:INTERNAL=1
 //Test HAVE_LZMA_STREAM_ENCODER_MT
-HAVE_LZMA_STREAM_ENCODER_MT:INTERNAL=
+HAVE_LZMA_STREAM_ENCODER_MT:INTERNAL=1
 //Have function mbrtowc
 HAVE_MBRTOWC:INTERNAL=1
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;membership.h
@@ -1384,12 +1678,18 @@ HAVE_OFF_T:INTERNAL=TRUE
 HAVE_OPEN:INTERNAL=1
 //Have function openat
 HAVE_OPENAT:INTERNAL=
+//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;bcrypt.h;wincrypt.h;winioctl.h;openssl/evp.h
+HAVE_OPENSSL_EVP_H:INTERNAL=1
+//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;bcrypt.h;wincrypt.h;winioctl.h;openssl/evp.h;openssl/opensslv.h
+HAVE_OPENSSL_OPENSSLV_H:INTERNAL=1
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;paths.h
 HAVE_PATHS_H:INTERNAL=
 //Result of TRY_COMPILE
 HAVE_PID_T:INTERNAL=TRUE
 //Have function pipe
 HAVE_PIPE:INTERNAL=
+//Have function PKCS5_PBKDF2_HMAC_SHA1
+HAVE_PKCS5_PBKDF2_HMAC_SHA1:INTERNAL=1
 //Have function poll
 HAVE_POLL:INTERNAL=
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;poll.h
@@ -1435,23 +1735,23 @@ HAVE_SIGACTION:INTERNAL=
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h
 HAVE_SIGNAL_H:INTERNAL=1
 //Result of TRY_COMPILE
+HAVE_SIZEOF_INT:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_LONG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_LONG_LONG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_SHORT:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_UNSIGNED:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_UNSIGNED_LONG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_UNSIGNED_LONG_LONG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_UNSIGNED_SHORT:INTERNAL=TRUE
+//Result of TRY_COMPILE
 HAVE_SIZEOF_WCHAR_T:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_INT:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_LONG:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_LONG_LONG:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_SHORT:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_UNSIGNED:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_UNSIGNED_LONG:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_UNSIGNED_LONG_LONG:INTERNAL=TRUE
-//Result of TRY_COMPILE
-HAVE_SIZE_OF_UNSIGNED_SHORT:INTERNAL=TRUE
 //Result of TRY_COMPILE
 HAVE_SIZE_T:INTERNAL=TRUE
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;spawn.h
@@ -1486,6 +1786,8 @@ HAVE_STRINGS_H:INTERNAL=1
 HAVE_STRING_H:INTERNAL=1
 //Have function strncpy_s
 HAVE_STRNCPY_S:INTERNAL=1
+//Have function strnlen
+HAVE_STRNLEN:INTERNAL=1
 //Have function strrchr
 HAVE_STRRCHR:INTERNAL=1
 //Have function strtoll
@@ -1496,8 +1798,8 @@ HAVE_STRTOQ:INTERNAL=
 HAVE_STRUCT_RICHACE:INTERNAL=
 //Test HAVE_STRUCT_RICHACL
 HAVE_STRUCT_RICHACL:INTERNAL=
-//Test HAVE_STRUCT_STATFS_F_NAMEMAX
-HAVE_STRUCT_STATFS_F_NAMEMAX:INTERNAL=
+//Test HAVE_STRUCT_STATFS
+HAVE_STRUCT_STATFS:INTERNAL=
 //Test HAVE_STRUCT_STAT_ST_BIRTHTIME
 HAVE_STRUCT_STAT_ST_BIRTHTIME:INTERNAL=
 //Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC
@@ -1528,6 +1830,8 @@ HAVE_STRUCT_XVFSCONF:INTERNAL=
 HAVE_SYMLINK:INTERNAL=
 //Test HAVE_SYNC_BUILTINS
 HAVE_SYNC_BUILTINS:INTERNAL=1
+//Have function sysconf
+HAVE_SYSCONF:INTERNAL=
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/acl.h
 HAVE_SYS_ACL_H:INTERNAL=
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h
@@ -1570,6 +1874,10 @@ HAVE_SYS_VFS_H:INTERNAL=
 HAVE_SYS_WAIT_H:INTERNAL=
 //Have includes sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;sys/xattr.h
 HAVE_SYS_XATTR_H:INTERNAL=
+//Have function tcgetattr
+HAVE_TCGETATTR:INTERNAL=
+//Have function tcsetattr
+HAVE_TCSETATTR:INTERNAL=
 //Have function timegm
 HAVE_TIMEGM:INTERNAL=
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h
@@ -1616,6 +1924,8 @@ HAVE_UTIMES:INTERNAL=
 HAVE_UTIME_H:INTERNAL=1
 //Have function vfork
 HAVE_VFORK:INTERNAL=
+//Test HAVE_VISIBILITY_ATTR
+HAVE_VISIBILITY_ATTR:INTERNAL=1
 //Have function vprintf
 HAVE_VPRINTF:INTERNAL=1
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h
@@ -1632,11 +1942,11 @@ HAVE_WCSLEN:INTERNAL=1
 HAVE_WCTOMB:INTERNAL=1
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h
 HAVE_WCTYPE_H:INTERNAL=1
-//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;Bcrypt.h;wincrypt.h
+//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;bcrypt.h;wincrypt.h
 HAVE_WINCRYPT_H:INTERNAL=1
 //Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h
 HAVE_WINDOWS_H:INTERNAL=1
-//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;Bcrypt.h;wincrypt.h;winioctl.h
+//Have include sys/types.h;ctype.h;direct.h;errno.h;fcntl.h;inttypes.h;io.h;limits.h;locale.h;memory.h;process.h;pthread.h;regex.h;signal.h;stdarg.h;stdint.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/param.h;sys/stat.h;sys/time.h;sys/utime.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h;bcrypt.h;wincrypt.h;winioctl.h
 HAVE_WINIOCTL_H:INTERNAL=1
 //Have function wmemcmp
 HAVE_WMEMCMP:INTERNAL=1
@@ -1648,20 +1958,22 @@ HAVE_WMEMMOVE:INTERNAL=1
 HAVE_WORKING_EXT2_IOC_GETFLAGS:INTERNAL=
 //Test HAVE_WORKING_FS_IOC_GETFLAGS
 HAVE_WORKING_FS_IOC_GETFLAGS:INTERNAL=
-//Have function _ctime64_s
-HAVE__CTIME64_S:INTERNAL=1
+//Have function ZSTD_compressStream
+HAVE_ZSTD_compressStream:INTERNAL=1
+//Have function ZSTD_minCLevel
+HAVE_ZSTD_minCLevel:INTERNAL=1
 //Have symbol _CrtSetReportMode
 HAVE__CrtSetReportMode:INTERNAL=1
 //Have function _fseeki64
 HAVE__FSEEKI64:INTERNAL=1
 //Have function _get_timezone
 HAVE__GET_TIMEZONE:INTERNAL=
-//Have function _localtime64_s
-HAVE__LOCALTIME64_S:INTERNAL=1
-//Have function _mkgmtime64
-HAVE__MKGMTIME64:INTERNAL=1
+//Have symbol _mkgmtime
+HAVE__MKGMTIME:INTERNAL=1
 //Have function _strtoi64
 HAVE__STRTOI64:INTERNAL=1
+//Test HAVE___ATTR__VIS_HIDDEN
+HAVE___ATTR__VIS_HIDDEN:INTERNAL=
 //Test HAVE___INLINE
 HAVE___INLINE:INTERNAL=1
 //Test HAVE___INLINE__
@@ -1690,6 +2002,76 @@ INT64_T:INTERNAL=8
 INTMAX_T:INTERNAL=8
 //CHECK_TYPE_SIZE: sizeof(intptr_t)
 INTPTR_T:INTERNAL=8
+JANSSON_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+JANSSON_CFLAGS_I:INTERNAL=
+JANSSON_CFLAGS_OTHER:INTERNAL=
+JANSSON_FOUND:INTERNAL=1
+JANSSON_INCLUDEDIR:INTERNAL=C:/msys64/mingw64/include
+JANSSON_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+JANSSON_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-ljansson
+JANSSON_LDFLAGS_OTHER:INTERNAL=
+JANSSON_LIBDIR:INTERNAL=C:/msys64/mingw64/lib
+JANSSON_LIBRARIES:INTERNAL=jansson
+JANSSON_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+JANSSON_LIBS:INTERNAL=
+JANSSON_LIBS_L:INTERNAL=
+JANSSON_LIBS_OTHER:INTERNAL=
+JANSSON_LIBS_PATHS:INTERNAL=
+JANSSON_MODULE_NAME:INTERNAL=jansson
+JANSSON_PREFIX:INTERNAL=C:/msys64/mingw64
+JANSSON_STATIC_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+JANSSON_STATIC_CFLAGS_I:INTERNAL=
+JANSSON_STATIC_CFLAGS_OTHER:INTERNAL=
+JANSSON_STATIC_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+JANSSON_STATIC_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-ljansson
+JANSSON_STATIC_LDFLAGS_OTHER:INTERNAL=
+JANSSON_STATIC_LIBDIR:INTERNAL=
+JANSSON_STATIC_LIBRARIES:INTERNAL=jansson
+JANSSON_STATIC_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+JANSSON_STATIC_LIBS:INTERNAL=
+JANSSON_STATIC_LIBS_L:INTERNAL=
+JANSSON_STATIC_LIBS_OTHER:INTERNAL=
+JANSSON_STATIC_LIBS_PATHS:INTERNAL=
+JANSSON_VERSION:INTERNAL=2.14.1
+JANSSON_jansson_INCLUDEDIR:INTERNAL=
+JANSSON_jansson_LIBDIR:INTERNAL=
+JANSSON_jansson_PREFIX:INTERNAL=
+JANSSON_jansson_VERSION:INTERNAL=
+LIBB2_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+LIBB2_CFLAGS_I:INTERNAL=
+LIBB2_CFLAGS_OTHER:INTERNAL=
+LIBB2_FOUND:INTERNAL=1
+LIBB2_INCLUDEDIR:INTERNAL=C:/msys64/mingw64/include
+LIBB2_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+LIBB2_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lb2
+LIBB2_LDFLAGS_OTHER:INTERNAL=
+LIBB2_LIBDIR:INTERNAL=C:/msys64/mingw64/lib
+LIBB2_LIBRARIES:INTERNAL=b2
+LIBB2_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+LIBB2_LIBS:INTERNAL=
+LIBB2_LIBS_L:INTERNAL=
+LIBB2_LIBS_OTHER:INTERNAL=
+LIBB2_LIBS_PATHS:INTERNAL=
+LIBB2_MODULE_NAME:INTERNAL=libb2
+LIBB2_PREFIX:INTERNAL=C:/msys64/mingw64
+LIBB2_STATIC_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include
+LIBB2_STATIC_CFLAGS_I:INTERNAL=
+LIBB2_STATIC_CFLAGS_OTHER:INTERNAL=
+LIBB2_STATIC_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+LIBB2_STATIC_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lb2
+LIBB2_STATIC_LDFLAGS_OTHER:INTERNAL=
+LIBB2_STATIC_LIBDIR:INTERNAL=
+LIBB2_STATIC_LIBRARIES:INTERNAL=b2
+LIBB2_STATIC_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+LIBB2_STATIC_LIBS:INTERNAL=
+LIBB2_STATIC_LIBS_L:INTERNAL=
+LIBB2_STATIC_LIBS_OTHER:INTERNAL=
+LIBB2_STATIC_LIBS_PATHS:INTERNAL=
+LIBB2_VERSION:INTERNAL=0.98.1
+LIBB2_libb2_INCLUDEDIR:INTERNAL=
+LIBB2_libb2_LIBDIR:INTERNAL=
+LIBB2_libb2_PREFIX:INTERNAL=
+LIBB2_libb2_VERSION:INTERNAL=
 //Test LIBCHARSET_STATIC
 LIBCHARSET_STATIC:INTERNAL=1
 //Macro LIBCHARSET_STATIC is checked with
@@ -1746,8 +2128,6 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //CHECK_TYPE_SIZE: sizeof(mode_t)
 MODE_T:INTERNAL=2
-//ADVANCED property for variable: NETTLE_INCLUDE_DIR
-NETTLE_INCLUDE_DIR-ADVANCED:INTERNAL=0
 //CHECK_TYPE_SIZE: sizeof(off64_t)
 OFF64_T:INTERNAL=8
 //CHECK_TYPE_SIZE: sizeof(off_t)
@@ -1795,38 +2175,73 @@ PID_T:INTERNAL=8
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_EXECUTABLE
+PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //Test SAFE_TO_DEFINE_EXTENSIONS
 SAFE_TO_DEFINE_EXTENSIONS:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(int)
+SIZEOF_INT:INTERNAL=4
+//CHECK_TYPE_SIZE: sizeof(long)
+SIZEOF_LONG:INTERNAL=4
+//CHECK_TYPE_SIZE: sizeof(long long)
+SIZEOF_LONG_LONG:INTERNAL=8
+//CHECK_TYPE_SIZE: sizeof(short)
+SIZEOF_SHORT:INTERNAL=2
+//CHECK_TYPE_SIZE: sizeof(unsigned)
+SIZEOF_UNSIGNED:INTERNAL=4
+//CHECK_TYPE_SIZE: sizeof(unsigned long)
+SIZEOF_UNSIGNED_LONG:INTERNAL=4
+//CHECK_TYPE_SIZE: sizeof(unsigned long long)
+SIZEOF_UNSIGNED_LONG_LONG:INTERNAL=8
+//CHECK_TYPE_SIZE: sizeof(unsigned short)
+SIZEOF_UNSIGNED_SHORT:INTERNAL=2
 //CHECK_TYPE_SIZE: sizeof(wchar_t)
 SIZEOF_WCHAR_T:INTERNAL=2
-//CHECK_TYPE_SIZE: sizeof(int)
-SIZE_OF_INT:INTERNAL=4
-//CHECK_TYPE_SIZE: sizeof(long)
-SIZE_OF_LONG:INTERNAL=4
-//CHECK_TYPE_SIZE: sizeof(long long)
-SIZE_OF_LONG_LONG:INTERNAL=8
-//CHECK_TYPE_SIZE: sizeof(short)
-SIZE_OF_SHORT:INTERNAL=2
-//CHECK_TYPE_SIZE: sizeof(unsigned)
-SIZE_OF_UNSIGNED:INTERNAL=4
-//CHECK_TYPE_SIZE: sizeof(unsigned long)
-SIZE_OF_UNSIGNED_LONG:INTERNAL=4
-//CHECK_TYPE_SIZE: sizeof(unsigned long long)
-SIZE_OF_UNSIGNED_LONG_LONG:INTERNAL=8
-//CHECK_TYPE_SIZE: sizeof(unsigned short)
-SIZE_OF_UNSIGNED_SHORT:INTERNAL=2
 //CHECK_TYPE_SIZE: sizeof(size_t)
 SIZE_T:INTERNAL=8
+SPDLOG_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include;-DSPDLOG_SHARED_LIB;-DSPDLOG_COMPILED_LIB;-DSPDLOG_FMT_EXTERNAL
+SPDLOG_CFLAGS_I:INTERNAL=
+SPDLOG_CFLAGS_OTHER:INTERNAL=-DSPDLOG_SHARED_LIB;-DSPDLOG_COMPILED_LIB;-DSPDLOG_FMT_EXTERNAL
+SPDLOG_FOUND:INTERNAL=1
+SPDLOG_INCLUDEDIR:INTERNAL=C:/msys64/mingw64/include
+SPDLOG_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+SPDLOG_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lspdlog;-pthread;-lfmt
+SPDLOG_LDFLAGS_OTHER:INTERNAL=-pthread
+SPDLOG_LIBDIR:INTERNAL=C:/msys64/mingw64/lib
+SPDLOG_LIBRARIES:INTERNAL=spdlog;fmt
+SPDLOG_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+SPDLOG_LIBS:INTERNAL=
+SPDLOG_LIBS_L:INTERNAL=
+SPDLOG_LIBS_OTHER:INTERNAL=
+SPDLOG_LIBS_PATHS:INTERNAL=
+SPDLOG_MODULE_NAME:INTERNAL=spdlog
+SPDLOG_PREFIX:INTERNAL=C:/msys64/mingw64
+SPDLOG_STATIC_CFLAGS:INTERNAL=-IC:/msys64/mingw64/include;-DSPDLOG_SHARED_LIB;-DSPDLOG_COMPILED_LIB;-DSPDLOG_FMT_EXTERNAL
+SPDLOG_STATIC_CFLAGS_I:INTERNAL=
+SPDLOG_STATIC_CFLAGS_OTHER:INTERNAL=-DSPDLOG_SHARED_LIB;-DSPDLOG_COMPILED_LIB;-DSPDLOG_FMT_EXTERNAL
+SPDLOG_STATIC_INCLUDE_DIRS:INTERNAL=C:/msys64/mingw64/include
+SPDLOG_STATIC_LDFLAGS:INTERNAL=-LC:/msys64/mingw64/lib;-lspdlog;-pthread;-lfmt
+SPDLOG_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+SPDLOG_STATIC_LIBDIR:INTERNAL=
+SPDLOG_STATIC_LIBRARIES:INTERNAL=spdlog;fmt
+SPDLOG_STATIC_LIBRARY_DIRS:INTERNAL=C:/msys64/mingw64/lib
+SPDLOG_STATIC_LIBS:INTERNAL=
+SPDLOG_STATIC_LIBS_L:INTERNAL=
+SPDLOG_STATIC_LIBS_OTHER:INTERNAL=
+SPDLOG_STATIC_LIBS_PATHS:INTERNAL=
+SPDLOG_VERSION:INTERNAL=1.15.1
+SPDLOG_spdlog_INCLUDEDIR:INTERNAL=
+SPDLOG_spdlog_LIBDIR:INTERNAL=
+SPDLOG_spdlog_PREFIX:INTERNAL=
+SPDLOG_spdlog_VERSION:INTERNAL=
 //CHECK_TYPE_SIZE: sizeof(ssize_t)
 SSIZE_T:INTERNAL=8
 //ADVANCED property for variable: SSL_EAY
 SSL_EAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Sphinx-build_EXECUTABLE
 Sphinx-build_EXECUTABLE-ADVANCED:INTERNAL=1
-//Test TIME_WITH_SYS_TIME
-TIME_WITH_SYS_TIME:INTERNAL=1
 //CHECK_TYPE_SIZE: uid_t unknown
 UID_T:INTERNAL=
 //CHECK_TYPE_SIZE: sizeof(uint16_t)
@@ -1887,6 +2302,8 @@ WITHOUT_LZMA_API_STATIC_WITH_LIB:INTERNAL=C:/msys64/mingw64/lib/liblzma.dll.a
 WITHOUT_ZLIB_DLL:INTERNAL=1
 //Macro WITHOUT_ZLIB_DLL is checked with
 WITHOUT_ZLIB_DLL_WITH_LIB:INTERNAL=C:/msys64/mingw64/lib/libz.dll.a
+//ADVANCED property for variable: ZLIB_CONF_WRITTEN
+ZLIB_CONF_WRITTEN-ADVANCED:INTERNAL=1
 //Test ZLIB_DLL
 ZLIB_DLL:INTERNAL=1
 //Macro ZLIB_DLL is checked with
@@ -1897,6 +2314,8 @@ ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=0
 ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
 ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_PREFIX
+ZLIB_PREFIX-ADVANCED:INTERNAL=1
 //Test ZLIB_WINAPI
 ZLIB_WINAPI:INTERNAL=
 //Result of TRY_COMPILE
@@ -1909,8 +2328,6 @@ ZLIB_WINAPI_WITH_LIB:INTERNAL=C:/msys64/mingw64/lib/libz.dll.a
 ZSTD_INCLUDE_DIR-ADVANCED:INTERNAL=0
 //ADVANCED property for variable: ZSTD_LIBRARY
 ZSTD_LIBRARY-ADVANCED:INTERNAL=0
-//Have include unistd.h
-Z_HAVE_UNISTD_H:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //linker supports push/pop state
@@ -1935,12 +2352,26 @@ __UINT8:INTERNAL=
 __WITHOUT_FILE_OFFSET_BITS_64:INTERNAL=FALSE
 //Result of TRY_COMPILE
 __WITH_FILE_OFFSET_BITS_64:INTERNAL=TRUE
+__pkg_config_arguments_ARCHIVE:INTERNAL=REQUIRED;libarchive
+__pkg_config_arguments_CURL:INTERNAL=REQUIRED;libcurl
 __pkg_config_arguments_GTK3:INTERNAL=REQUIRED;gtk+-3.0
+__pkg_config_arguments_JANSSON:INTERNAL=REQUIRED;jansson
+__pkg_config_arguments_LIBB2:INTERNAL=libb2
 __pkg_config_arguments_PC_LIBXML:INTERNAL=QUIET;libxml-2.0
+__pkg_config_arguments_SPDLOG:INTERNAL=REQUIRED;spdlog
+__pkg_config_checked_ARCHIVE:INTERNAL=1
+__pkg_config_checked_CURL:INTERNAL=1
 __pkg_config_checked_GTK3:INTERNAL=1
+__pkg_config_checked_JANSSON:INTERNAL=1
+__pkg_config_checked_LIBB2:INTERNAL=1
 __pkg_config_checked_PC_LIBXML:INTERNAL=1
+__pkg_config_checked_SPDLOG:INTERNAL=1
 //Result of TRY_COMPILE
 __stub:INTERNAL=FALSE
+//ADVANCED property for variable: pkgcfg_lib_ARCHIVE_archive
+pkgcfg_lib_ARCHIVE_archive-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_CURL_curl
+pkgcfg_lib_CURL_curl-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GTK3_atk-1.0
 pkgcfg_lib_GTK3_atk-1.0-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GTK3_cairo
@@ -1997,7 +2428,15 @@ pkgcfg_lib_GTK3_winmm-ADVANCED:INTERNAL=1
 pkgcfg_lib_GTK3_winspool-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GTK3_z
 pkgcfg_lib_GTK3_z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_JANSSON_jansson
+pkgcfg_lib_JANSSON_jansson-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_LIBB2_b2
+pkgcfg_lib_LIBB2_b2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_LIBXML_xml2
 pkgcfg_lib_PC_LIBXML_xml2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SPDLOG_fmt
+pkgcfg_lib_SPDLOG_fmt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SPDLOG_spdlog
+pkgcfg_lib_SPDLOG_spdlog-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=C:/msys64/mingw64/lib
 
