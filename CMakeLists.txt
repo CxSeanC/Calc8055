@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(VulnCalc)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
 
 # Collect source files
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.c")
@@ -18,6 +19,7 @@ pkg_check_modules(ARCHIVE REQUIRED libarchive)
 find_package(Boost REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(Threads REQUIRED)
+find_package(ZLIB REQUIRED)
 
 # Include directories
 include_directories(
@@ -29,7 +31,7 @@ include_directories(
     ${Boost_INCLUDE_DIRS}
 )
 
-# Link libraries explicitly
+# Link libraries
 target_link_libraries(vulncalc
     ${GTK3_LIBRARIES}
     ${CURL_LIBRARIES}
@@ -66,4 +68,13 @@ target_link_libraries(vulncalc
     Xtst
     freetype
     fontconfig
+)
+
+# Add definitions if needed
+add_definitions(
+    ${GTK3_CFLAGS_OTHER}
+    ${CURL_CFLAGS_OTHER}
+    ${SPDLOG_CFLAGS_OTHER}
+    ${JANSSON_CFLAGS_OTHER}
+    ${ARCHIVE_CFLAGS_OTHER}
 )
