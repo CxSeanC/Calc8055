@@ -1,47 +1,61 @@
-# CalcSec8055 🔥📟 (Intentionally Vulnerable C/C++ Calculator)
+# CalcSec8055 – Intentionally Vulnerable C/C++ Calculator
 
-CalcSec8055 is a deliberately insecure C/C++ calculator application with a GTK-based UI and OpenAPI-documented REST API. It's designed for security testing, SAST/DAST/IAST demos, and educational exploitation practice.
+**CalcSec8055** is a deliberately insecure C/C++ calculator application designed to support security testing and demonstration of AppSec tools such as SAST, DAST, and IAST. It includes both a desktop GUI and an OpenAPI-based REST API, making it ideal for proof-of-value (PoV) exercises, developer training, and secure coding workshops.
 
----
+## Key Features
 
-## 🧱 Features
+- **Desktop User Interface**
+  - Built with GTK+ 3 to simulate a native Linux calculator application.
 
-- 💻 GTK+ 3 Desktop UI  
-- 🌐 REST API (OpenAPI 3.0 / C++ REST SDK)  
-- 🕳️ Common C/C++ vulnerabilities:
-  - Buffer overflows
-  - Off-by-one errors
-  - Format string injection
-  - Command and string injection
-  - Unsafe memory handling  
-- 💥 Hardcoded secrets:
-  - Realistic-looking API keys, PGP, and RSA private keys  
-- 🌍 Network exfiltration using `libcurl`  
-- 📦 Dockerized build and run  
-- ☁️ Infrastructure-as-Code (Terraform)  
-- 🧩 25+ Open Source Libraries (C/C++ only)
+- **REST API (OpenAPI 3.0)**
+  - Implemented using the C++ REST SDK (cpprestsdk).
+  - Full OpenAPI documentation included for compatibility with tools like Postman, Swagger, and DAST engines.
 
----
+- **Vulnerability Coverage**
+  - Contains a wide range of common C/C++ vulnerabilities, including:
+    - Buffer overflows
+    - Off-by-one errors
+    - Format string injection
+    - Command and code injection
+    - Insecure memory allocation and deallocation
+    - Improper input validation
 
-## 🛠️ Dependencies (Partial List)
+- **Embedded Secrets**
+  - Application includes hardcoded secrets:
+    - Simulated API keys
+    - RSA private keys
+    - PGP private keys
 
-- `gtk+-3.0`  
-- `cpprestsdk`  
-- `libcurl`  
-- `jansson`  
-- `libarchive`  
-- `spdlog`  
-- `ncurses`  
-- `boost`  
-- `openssl`  
-- `pkg-config`  
-> Full list declared in `CMakeLists.txt`
+- **Simulated Data Exfiltration**
+  - Uses `libcurl` to simulate malicious outbound network activity.
 
----
+- **Container Support**
+  - Includes a Dockerfile for containerized execution and testing.
 
-## 🚀 Usage
+- **Infrastructure-as-Code**
+  - Terraform configuration files are provided to help model real-world cloud deployments and demonstrate IaC scanning capabilities.
 
-### 🔧 Build Locally (Linux)
+- **Third-Party Libraries**
+  - More than 25 C/C++ open source libraries are used to create realistic dependency graphs for Software Composition Analysis (SCA) testing.
+
+## Dependencies (Partial List)
+
+The following are core dependencies used in this application:
+
+- `gtk+-3.0`
+- `cpprestsdk`
+- `libcurl`
+- `jansson`
+- `libarchive`
+- `spdlog`
+- `ncurses`
+- `boost`
+- `openssl`
+- `pkg-config`
+
+A complete list of dependencies is declared in the `CMakeLists.txt`.
+
+## Build Instructions (Linux)
 
 ```bash
 mkdir build && cd build
