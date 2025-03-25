@@ -1,0 +1,8 @@
+openapi: 3.0.0
+info:
+  title: Vulnerable Calculator API
+  version: 1.0.0
+paths:
+  /calculate:
+    post:
+      summary: Evaluate a math expression
