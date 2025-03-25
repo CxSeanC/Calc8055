@@ -217,7 +217,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_MD5_OPENSSL 1
 
 /* MD5 via ARCHIVE_CRYPTO_MD5_WIN supported. */
-/* #undef ARCHIVE_CRYPTO_MD5_WIN */
+#define ARCHIVE_CRYPTO_MD5_WIN 1
 
 /* RMD160 via ARCHIVE_CRYPTO_RMD160_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_RMD160_LIBC */
@@ -247,7 +247,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA1_OPENSSL 1
 
 /* SHA1 via ARCHIVE_CRYPTO_SHA1_WIN supported. */
-/* #undef ARCHIVE_CRYPTO_SHA1_WIN */
+#define ARCHIVE_CRYPTO_SHA1_WIN 1
 
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA256_LIBC */
@@ -271,7 +271,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA256_OPENSSL 1
 
 /* SHA256 via ARCHIVE_CRYPTO_SHA256_WIN supported. */
-/* #undef ARCHIVE_CRYPTO_SHA256_WIN */
+#define ARCHIVE_CRYPTO_SHA256_WIN 1
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA384_LIBC */
@@ -295,7 +295,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA384_OPENSSL 1
 
 /* SHA384 via ARCHIVE_CRYPTO_SHA384_WIN supported. */
-/* #undef ARCHIVE_CRYPTO_SHA384_WIN */
+#define ARCHIVE_CRYPTO_SHA384_WIN 1
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_LIBC supported. */
 /* #undef ARCHIVE_CRYPTO_SHA512_LIBC */
@@ -319,7 +319,7 @@ typedef uint64_t uintmax_t;
 #define ARCHIVE_CRYPTO_SHA512_OPENSSL 1
 
 /* SHA512 via ARCHIVE_CRYPTO_SHA512_WIN supported. */
-/* #undef ARCHIVE_CRYPTO_SHA512_WIN */
+#define ARCHIVE_CRYPTO_SHA512_WIN 1
 
 /* AIX xattr support */
 /* #undef ARCHIVE_XATTR_AIX */

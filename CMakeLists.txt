@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 add_subdirectory(libs/jansson)
 add_subdirectory(libs/spdlog)
 add_subdirectory(libs/libarchive)
-add_subdirectory(libs/cpprestsdk)
+# cpprestsdk removed
 add_subdirectory(libs/openssl)
 add_subdirectory(libs/zlib)
 add_subdirectory(libs/ncurses)
@@ -19,7 +19,7 @@ add_subdirectory(libs/gtk)
 # Collect source files
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.c")
 
-# Optional: exclude files needing cpprestsdk
+# Exclude files needing cpprestsdk
 list(REMOVE_ITEM SOURCES "${CMAKE_SOURCE_DIR}/src/api_server.cpp")
 
 add_executable(vulncalc ${SOURCES})
@@ -29,7 +29,7 @@ include_directories(
     libs/jansson/src
     libs/spdlog/include
     libs/libarchive/libarchive
-    libs/cpprestsdk/Release/include
+    # libs/cpprestsdk/Release/include removed
     libs/openssl/include
     libs/zlib
     libs/ncurses/include
@@ -43,7 +43,7 @@ target_link_libraries(vulncalc
     jansson
     spdlog
     archive
-    cpprest
+    # cpprest removed
     ssl
     crypto
     z

@@ -16743,3 +16743,383 @@ events:
         mingw32-make: *** [Makefile:133: cmTC_30cc2/fast] Error 2
         
       exitCode: 2
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:978 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2182 (CHECK_CRYPTO)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_MD5_LIBMD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_09657/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_09657.dir\\build.make CMakeFiles/cmTC_09657.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_09657.dir/check_crypto_md.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_09657.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_09657.dir\\check_crypto_md.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c
+        In file included from C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c:1471:
+        C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/libarchive/archive_digest_private.h:94:10: fatal error: md5.h: No such file or directory
+           94 | #include <md5.h>
+              |          ^~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_09657.dir\\build.make:81: CMakeFiles/cmTC_09657.dir/check_crypto_md.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_09657/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:978 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2182 (CHECK_CRYPTO)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_RMD160_LIBMD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_137f3/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_137f3.dir\\build.make CMakeFiles/cmTC_137f3.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_137f3.dir/check_crypto_md.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_137f3.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_137f3.dir\\check_crypto_md.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c
+        In file included from C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c:1471:
+        C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/libarchive/archive_digest_private.h:97:10: fatal error: ripemd.h: No such file or directory
+           97 | #include <ripemd.h>
+              |          ^~~~~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_137f3.dir\\build.make:81: CMakeFiles/cmTC_137f3.dir/check_crypto_md.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_137f3/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:978 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2182 (CHECK_CRYPTO)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA1_LIBMD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_34c0d/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_34c0d.dir\\build.make CMakeFiles/cmTC_34c0d.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_34c0d.dir/check_crypto_md.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_34c0d.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_34c0d.dir\\check_crypto_md.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c
+        In file included from C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c:1471:
+        C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/libarchive/archive_digest_private.h:100:10: fatal error: sha.h: No such file or directory
+          100 | #include <sha.h>
+              |          ^~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_34c0d.dir\\build.make:81: CMakeFiles/cmTC_34c0d.dir/check_crypto_md.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_34c0d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:978 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2182 (CHECK_CRYPTO)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA256_LIBMD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_cacf4/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_cacf4.dir\\build.make CMakeFiles/cmTC_cacf4.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_cacf4.dir/check_crypto_md.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_cacf4.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_cacf4.dir\\check_crypto_md.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c
+        In file included from C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c:1471:
+        C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/libarchive/archive_digest_private.h:103:10: fatal error: sha256.h: No such file or directory
+          103 | #include <sha256.h>
+              |          ^~~~~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_cacf4.dir\\build.make:81: CMakeFiles/cmTC_cacf4.dir/check_crypto_md.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_cacf4/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:978 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2182 (CHECK_CRYPTO)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA512_LIBMD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_7bd4f/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_7bd4f.dir\\build.make CMakeFiles/cmTC_7bd4f.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_7bd4f.dir/check_crypto_md.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_7bd4f.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_7bd4f.dir\\check_crypto_md.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c
+        In file included from C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_md.c:1471:
+        C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/libarchive/archive_digest_private.h:106:10: fatal error: sha512.h: No such file or directory
+          106 | #include <sha512.h>
+              |          ^~~~~~~~~~
+        compilation terminated.
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_7bd4f.dir\\build.make:81: CMakeFiles/cmTC_7bd4f.dir/check_crypto_md.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        mingw32-make: *** [Makefile:133: cmTC_7bd4f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:1066 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2184 (CHECK_CRYPTO_WIN)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_MD5_WIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9f982/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9f982.dir\\build.make CMakeFiles/cmTC_9f982.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9f982.dir/check_crypto_win.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_9f982.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_9f982.dir\\check_crypto_win.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_win.c
+        Linking C executable cmTC_9f982.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_9f982.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_9f982.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9f982.dir/objects.a @CMakeFiles\\cmTC_9f982.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\\cmTC_9f982.dir/objects.a -Wl,--no-whole-archive -o cmTC_9f982.exe -Wl,--out-implib,libcmTC_9f982.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9f982.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:1066 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2184 (CHECK_CRYPTO_WIN)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA1_WIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_7a890/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_7a890.dir\\build.make CMakeFiles/cmTC_7a890.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_7a890.dir/check_crypto_win.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_7a890.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_7a890.dir\\check_crypto_win.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_win.c
+        Linking C executable cmTC_7a890.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_7a890.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_7a890.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_7a890.dir/objects.a @CMakeFiles\\cmTC_7a890.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\\cmTC_7a890.dir/objects.a -Wl,--no-whole-archive -o cmTC_7a890.exe -Wl,--out-implib,libcmTC_7a890.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_7a890.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:1066 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2184 (CHECK_CRYPTO_WIN)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA256_WIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_61ff0/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_61ff0.dir\\build.make CMakeFiles/cmTC_61ff0.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_61ff0.dir/check_crypto_win.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_61ff0.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_61ff0.dir\\check_crypto_win.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_win.c
+        Linking C executable cmTC_61ff0.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_61ff0.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_61ff0.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_61ff0.dir/objects.a @CMakeFiles\\cmTC_61ff0.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\\cmTC_61ff0.dir/objects.a -Wl,--no-whole-archive -o cmTC_61ff0.exe -Wl,--out-implib,libcmTC_61ff0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_61ff0.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:1066 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2184 (CHECK_CRYPTO_WIN)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA384_WIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_33590/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_33590.dir\\build.make CMakeFiles/cmTC_33590.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_33590.dir/check_crypto_win.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_33590.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_33590.dir\\check_crypto_win.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_win.c
+        Linking C executable cmTC_33590.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_33590.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_33590.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_33590.dir/objects.a @CMakeFiles\\cmTC_33590.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\\cmTC_33590.dir/objects.a -Wl,--no-whole-archive -o cmTC_33590.exe -Wl,--out-implib,libcmTC_33590.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_33590.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "libs/libarchive/CMakeLists.txt:1066 (TRY_COMPILE)"
+      - "libs/libarchive/CMakeLists.txt:2184 (CHECK_CRYPTO_WIN)"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections"
+      CMAKE_MODULE_PATH: "C:/Users/SeanCa/Downloads/CalcSec8055/libs/libarchive/build/cmake"
+    buildResult:
+      variable: "ARCHIVE_CRYPTO_SHA512_WIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_eb083/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_eb083.dir\\build.make CMakeFiles/cmTC_eb083.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_eb083.dir/check_crypto_win.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe  @CMakeFiles/cmTC_eb083.dir/includes_C.rsp -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -o CMakeFiles\\cmTC_eb083.dir\\check_crypto_win.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeTmp\\check_crypto_win.c
+        Linking C executable cmTC_eb083.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_eb083.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_eb083.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_eb083.dir/objects.a @CMakeFiles\\cmTC_eb083.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe  -Wall -Wformat -Wformat-security -ffunction-sections -fdata-sections  -Wl,--whole-archive CMakeFiles\\cmTC_eb083.dir/objects.a -Wl,--no-whole-archive -o cmTC_eb083.exe -Wl,--out-implib,libcmTC_eb083.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_eb083.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/msys64/mingw64/share/cmake/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/msys64/mingw64/share/cmake/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "libs/zlib/CMakeLists.txt:83 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-po214l"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-po214l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-po214l'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9a3ea/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9a3ea.dir\\build.make CMakeFiles/cmTC_9a3ea.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-po214l'
+        Building C object CMakeFiles/cmTC_9a3ea.dir/OFF64_T.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe -D_LARGEFILE64_SOURCE=1   -o CMakeFiles\\cmTC_9a3ea.dir\\OFF64_T.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeScratch\\TryCompile-po214l\\OFF64_T.c
+        Linking C executable cmTC_9a3ea.exe
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_9a3ea.dir\\link.txt --verbose=1
+        C:\\msys64\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_9a3ea.dir/objects.a
+        C:\\msys64\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9a3ea.dir/objects.a @CMakeFiles\\cmTC_9a3ea.dir\\objects1.rsp
+        C:\\msys64\\mingw64\\bin\\cc.exe -Wl,--whole-archive CMakeFiles\\cmTC_9a3ea.dir/objects.a -Wl,--no-whole-archive -o cmTC_9a3ea.exe -Wl,--out-implib,libcmTC_9a3ea.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9a3ea.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-po214l'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/msys64/mingw64/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/msys64/mingw64/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "libs/zlib/CMakeLists.txt:110 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE___ATTR__VIS_HIDDEN"
+    directories:
+      source: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-tf9i49"
+      binary: "C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-tf9i49"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "HAVE___ATTR__VIS_HIDDEN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-tf9i49'
+        
+        Run Build Command(s): C:/msys64/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_394d1/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_394d1.dir\\build.make CMakeFiles/cmTC_394d1.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-tf9i49'
+        Building C object CMakeFiles/cmTC_394d1.dir/src.c.obj
+        C:\\msys64\\mingw64\\bin\\cc.exe -DHAVE___ATTR__VIS_HIDDEN  -WError -o CMakeFiles\\cmTC_394d1.dir\\src.c.obj -c C:\\Users\\SeanCa\\Downloads\\CalcSec8055\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tf9i49\\src.c
+        cc.exe: error: unrecognized command-line option '-WError'; did you mean '-Werror'?
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_394d1.dir\\build.make:80: CMakeFiles/cmTC_394d1.dir/src.c.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/SeanCa/Downloads/CalcSec8055/build/CMakeFiles/CMakeScratch/TryCompile-tf9i49'
+        mingw32-make: *** [Makefile:133: cmTC_394d1/fast] Error 2
+        
+      exitCode: 2
+...
