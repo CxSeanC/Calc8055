@@ -1,6 +1,6 @@
 # Calc8055 – Intentionally Vulnerable C/C++ Calculator
 
-**Calc8055** is a deliberately insecure C/C++ calculator application designed to support security testing and demonstration of AppSec tools such as SAST, SCA, IaC, Secrets, and Containers. It includes both a desktop GUI and an OpenAPI-based REST API, making it ideal for proof-of-value (PoV) exercises, developer training, and secure coding workshops.
+**Calc8055** is a deliberately insecure C/C++ calculator application designed to support security testing and demonstration of AppSec tools such as **SAST, SCA, IaC, Secrets, and Containers**. It includes both a desktop GUI and an OpenAPI-based REST API, making it ideal for proof-of-value (PoV) exercises, developer training, and secure coding workshops.
 
 ## Key Features
 
